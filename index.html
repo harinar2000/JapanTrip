@@ -1,0 +1,2428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Japan Plan B, Nov 20 to Dec 1, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF1EF; --surface:#FFFFFF; --ink:#17202E; --muted:#556070; --line:#D3D9D5;
+  --momiji:#A92431; --ginkgo:#B98100; --moss:#2C5B49; --river:#2B4B6E;
+  --chip-train-bg:#E3EBF4; --chip-veg-bg:#E0EEE7; --chip-meat-bg:#F3E1E3; --chip-both-bg:#F6EBCF; --chip-book-bg:#A92431; --chip-check-bg:#ECEEF0;
+  --chip-book-fg:#FFFFFF;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#11161D; --surface:#1A212B; --ink:#E7EBEF; --muted:#9AA6B3; --line:#2D3644;
+    --momiji:#E7646D; --ginkgo:#E8B94A; --moss:#78BB9D; --river:#86AAD2;
+    --chip-train-bg:#22344A; --chip-veg-bg:#1F3A30; --chip-meat-bg:#43242A; --chip-both-bg:#44381A; --chip-book-bg:#E7646D; --chip-check-bg:#2B3440;
+    --chip-book-fg:#1A0C0E;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#11161D; --surface:#1A212B; --ink:#E7EBEF; --muted:#9AA6B3; --line:#2D3644;
+  --momiji:#E7646D; --ginkgo:#E8B94A; --moss:#78BB9D; --river:#86AAD2;
+  --chip-train-bg:#22344A; --chip-veg-bg:#1F3A30; --chip-meat-bg:#43242A; --chip-both-bg:#44381A; --chip-book-bg:#E7646D; --chip-check-bg:#2B3440;
+  --chip-book-fg:#1A0C0E;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 92px);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.55}
+.wrap{max-width:780px;margin:0 auto;padding:0 18px 80px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ginkgo);outline-offset:2px;border-radius:4px}
+
+.hero{padding:34px 0 18px}
+.hero h1{font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",Georgia,serif;font-weight:800;font-size:clamp(2.4rem,9vw,4.1rem);line-height:1.02;letter-spacing:-.01em;margin:0 0 10px}
+.hero .sub{font-size:1.05rem;color:var(--muted);margin:0;max-width:44ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+
+.navbar{position:sticky;top:0;z-index:20;background:var(--bg);padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid var(--line)}
+.navbar::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30;pointer-events:none}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:10px 18px 12px;max-width:780px;margin:0 auto;scrollbar-width:thin}
+.cell{flex:0 0 auto;min-width:58px;text-decoration:none;border:1.5px solid var(--line);border-radius:10px;padding:6px 8px 7px;display:flex;flex-direction:column;align-items:center;background:var(--surface);border-top-width:5px}
+.cell .cn{font-family:"Shippori Mincho",Georgia,serif;font-weight:800;font-size:1.25rem;line-height:1}
+.cell .cw{font-size:.74rem;color:var(--muted);margin-top:2px}
+.cell .cp{font-size:.72rem;font-weight:700;margin-top:1px}
+.cell.base-tokyo1{border-top-color:var(--river)}
+.cell.base-kyoto{border-top-color:var(--momiji)}
+.cell.base-tokyo2{border-top-color:var(--moss)}
+.cell.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.cell.active .cw{color:var(--bg);opacity:.8}
+
+h2{font-family:"Shippori Mincho",Georgia,serif;font-weight:800;font-size:1.65rem;line-height:1.15;margin:44px 0 14px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px 18px}
+.chk{list-style:none;margin:0;padding:0}
+.chk li{padding:14px 0;border-bottom:1px solid var(--line)}
+.chk li:last-child{border-bottom:0}
+.chk strong{display:block;margin-bottom:3px}
+.chk span{color:var(--muted)}
+.book{list-style:none;margin:0;padding:0}
+.book li{display:grid;grid-template-columns:5.6rem 1fr;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
+.book li:last-child{border-bottom:0}
+.book .w{font-weight:700;color:var(--momiji)}
+.eat{list-style:none;margin:0;padding:0}
+.eat li{padding:13px 0;border-bottom:1px solid var(--line)}
+.eat li:last-child{border-bottom:0}
+.eat strong{display:block;margin-bottom:3px}
+.eat span{color:var(--muted)}
+
+.day{margin-top:38px;scroll-margin-top:92px}
+.dh{display:flex;align-items:center;gap:14px}
+.date{flex:0 0 auto;width:74px;text-align:center;border-radius:12px;padding:8px 4px;color:#fff}
+.date .n{display:block;font-family:"Shippori Mincho",Georgia,serif;font-weight:800;font-size:2.2rem;line-height:1}
+.date .m{display:block;font-size:.8rem;margin-top:3px;opacity:.95}
+.base-tokyo1 .date{background:var(--river)}
+.base-kyoto .date{background:var(--momiji)}
+.base-tokyo2 .date{background:var(--moss)}
+:root[data-theme="dark"] .date, :root:not([data-theme="light"]) .date{color:#0F1318}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .date{color:#fff}}
+.ht h3{font-family:"Shippori Mincho",Georgia,serif;font-weight:800;font-size:1.4rem;line-height:1.15;margin:0}
+.stay{margin:4px 0 0;font-size:.88rem;color:var(--muted)}
+.summary{margin:14px 0 4px;color:var(--ink)}
+.tl{list-style:none;margin:10px 0 0;padding:0}
+.row{display:grid;grid-template-columns:4.4rem 1fr;gap:0 10px;position:relative;padding:0 0 18px}
+.row::before{content:"";position:absolute;left:calc(4.4rem + 4px);top:8px;bottom:-6px;width:2px;background:var(--line)}
+.row:last-child::before{display:none}
+.row::after{content:"";position:absolute;left:calc(4.4rem - 2px);top:8px;width:13px;height:13px;border-radius:50%;background:var(--surface);border:3px solid var(--ink)}
+.row.k-food::after{border-color:var(--ginkgo)}
+.row.k-train::after{border-color:var(--river)}
+.t{font-variant-numeric:tabular-nums;font-weight:700;font-size:.95rem;padding-top:2px;text-align:right;padding-right:2px;line-height:1.2}
+.b{padding-left:26px}
+.b h4{margin:0 0 3px;font-size:1.04rem;line-height:1.3}
+.b p{margin:0;color:var(--muted);font-size:.97rem}
+.b p strong{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
+.chip{display:inline-block;border-radius:999px;padding:2px 10px;font-size:.78rem;font-weight:700;line-height:1.5}
+.c-train{background:var(--chip-train-bg);color:var(--river)}
+.c-veg{background:var(--chip-veg-bg);color:var(--moss)}
+.c-meat{background:var(--chip-meat-bg);color:var(--momiji)}
+.c-both{background:var(--chip-both-bg);color:var(--ginkgo)}
+.c-book{background:var(--chip-book-bg);color:var(--chip-book-fg)}
+.c-check{background:var(--chip-check-bg);color:var(--muted)}
+.cut{margin:4px 0 0;padding:12px 14px;border-left:4px solid var(--ginkgo);background:var(--surface);border-radius:0 10px 10px 0;font-size:.95rem}
+.foot{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+@media (max-width:420px){
+  body{font-size:16px}
+  .row{grid-template-columns:3.8rem 1fr}
+  .row::before{left:calc(3.8rem + 4px)}
+  .row::after{left:calc(3.8rem - 2px)}
+  .b{padding-left:22px}
+  .date{width:64px}
+}
+@media print{.navbar{display:none}.day{break-inside:avoid-page}}
+
+.panel .fl{margin:0}
+.cmp{list-style:none;margin:0;padding:0}
+.cmp li{padding:13px 0;border-bottom:1px solid var(--line)}
+.cmp li:last-child{border-bottom:0}
+.cmp strong{display:block;margin-bottom:3px}
+.cmp span{color:var(--muted);display:block}
+.tag-b{display:inline-block;margin-left:8px;border-radius:999px;padding:1px 9px;font-size:.78rem;font-weight:700;background:var(--chip-both-bg);color:var(--ginkgo);vertical-align:middle}
+
+.route{margin-top:10px;display:grid;gap:8px}
+.leg{border:1px solid var(--line);border-left:6px solid var(--lc);background:var(--surface);border-radius:0 10px 10px 0;padding:9px 12px 10px}
+.leg .ln{font-weight:700;font-size:.97rem;line-height:1.3;margin-bottom:5px}
+.leg dl{margin:0;display:grid;grid-template-columns:4.6rem 1fr;gap:3px 10px;font-size:.92rem}
+.leg dt{color:var(--muted);font-weight:500}
+.leg dd{margin:0;color:var(--ink)}
+.leg dd.off{font-weight:700}
+.leg .tip{grid-column:1 / -1;margin-top:3px;color:var(--muted);font-size:.9rem}
+.basics{list-style:none;margin:0;padding:0}
+.basics li{padding:13px 0;border-bottom:1px solid var(--line)}
+.basics li:last-child{border-bottom:0}
+.basics strong{display:block;margin-bottom:3px}
+.basics span{color:var(--muted);display:block}
+@media (max-width:420px){.leg dl{grid-template-columns:4rem 1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <h1>Plan B,<br>Nov 20 to Dec 1</h1>
+    <p class="sub">A fresh pass over the whole trip, built from your three Airbnbs, your two Shinkansen tickets, your flights, and the weekday, tide and festival dates. Every train and bus step now names the line, where to board, which direction, and where to get off.</p>
+    <div class="legend"><span class="chip c-train">Train or transit</span><span class="chip c-both">Works for all four</span><span class="chip c-veg">Vegetarian ok</span><span class="chip c-meat">Meat eaters</span><span class="chip c-book">Book ahead</span><span class="chip c-check">Confirm on the day</span></div>
+  </header>
+</div>
+<nav class="navbar" aria-label="Days">
+  <div class="strip"><a class="cell base-tokyo1" href="#d-nov-20" data-target="d-nov-20"><span class="cn">20</span><span class="cw">Fri</span><span class="cp">Tokyo</span></a><a class="cell base-tokyo1" href="#d-nov-21" data-target="d-nov-21"><span class="cn">21</span><span class="cw">Sat</span><span class="cp">Asakusa</span></a><a class="cell base-tokyo1" href="#d-nov-22" data-target="d-nov-22"><span class="cn">22</span><span class="cw">Sun</span><span class="cp">Fuji</span></a><a class="cell base-tokyo1" href="#d-nov-23" data-target="d-nov-23"><span class="cn">23</span><span class="cw">Mon</span><span class="cp">Shinjuku</span></a><a class="cell base-kyoto" href="#d-nov-24" data-target="d-nov-24"><span class="cn">24</span><span class="cw">Tue</span><span class="cp">Kyoto</span></a><a class="cell base-kyoto" href="#d-nov-25" data-target="d-nov-25"><span class="cn">25</span><span class="cw">Wed</span><span class="cp">Arashiyama</span></a><a class="cell base-kyoto" href="#d-nov-26" data-target="d-nov-26"><span class="cn">26</span><span class="cw">Thu</span><span class="cp">Nara</span></a><a class="cell base-kyoto" href="#d-nov-27" data-target="d-nov-27"><span class="cn">27</span><span class="cw">Fri</span><span class="cp">Hiroshima</span></a><a class="cell base-tokyo2" href="#d-nov-28" data-target="d-nov-28"><span class="cn">28</span><span class="cw">Sat</span><span class="cp">Tokyo</span></a><a class="cell base-tokyo2" href="#d-nov-29" data-target="d-nov-29"><span class="cn">29</span><span class="cw">Sun</span><span class="cp">Kamakura</span></a><a class="cell base-tokyo2" href="#d-nov-30" data-target="d-nov-30"><span class="cn">30</span><span class="cw">Mon</span><span class="cp">Tokyo</span></a><a class="cell base-tokyo2" href="#d-dec-01" data-target="d-dec-01"><span class="cn">01</span><span class="cw">Tue</span><span class="cp">Tokyo</span></a></div>
+</nav>
+<main class="wrap">
+  <h2 id="verdict">Plan A or Plan B</h2>
+  <div class="panel"><ul class="cmp"><li><strong>Plan A</strong><span>Fuji Sun Nov 22 with a late return, Osaka squeezed into Nov 24, luggage forwarding with four fixed handoffs, Gaien ginkgo on Nov 23 (early), Hiroshima on Nov 26.</span></li><li><strong>Plan B</strong><span>Tokyo classics on Nov 21, Fuji on Sun Nov 22, Osaka with Nara on Nov 26, no luggage appointments, Gaien ginkgo on Nov 30 at peak, Rikugien at night near the Airbnb, Hiroshima on Nov 27 at peak tide.</span></li><li><strong>Verdict</strong><span>Plan B is easier to execute and avoids more crowds and appointments. Plan A keeps luggage forwarding and puts the Eikando illumination back. If luggage forwarding matters more than the rest, stay with Plan A.</span></li></ul></div>
+
+  <h2 id="changed">What changed, and why</h2>
+  <div class="panel"><ul class="cmp"><li><strong>No luggage forwarding at all.</strong><span>Your Airbnbs cannot receive bags, so every forwarding leg becomes an appointment you must attend: four fixed times that cost you Osaka, a late Kyoto evening and a Fuji-day rush. Both Shinkansen trips are direct. Carrying bags costs about 15 minutes of hauling per leg and saves about ¥20,000 for the two legs.</span></li><li><strong>Nov 21 is a Tokyo acclimatization day.</strong><span>Senso-ji at dawn, Ueno Park, Ameyoko and Ginza, then Tokyo Tower and a ramen dinner in Asakusa. You get a full Tokyo day before the big day trip.</span></li><li><strong>Fuji stays on Sun Nov 22.</strong><span>The festival lights are on and leaf color is likely near peak (one source puts the 2025 peak on Nov 18 to 26). Sunday outbound avoids the Saturday-morning jam, and because Monday is a holiday many visitors stay over, so the evening return is usually lighter than a normal Sunday. The risk is the Sunday-afternoon return, so you leave after about 19:30 or take the 17:38 train.</span></li><li><strong>Nov 23 starts late.</strong><span>After a Fuji night that ends around 22:00, you start at 08:30. Shinjuku Gyoen is open on the holiday and closed Nov 24 and Nov 30, so today is its day. teamLab Planets and Odaiba fill the rest.</span></li><li><strong>Kyoto evening is one walk.</strong><span>Kiyomizu-dera at sunset, Kodai-ji’s night illumination and Gion dinner sit on the same hillside, so they fit in a single evening. That replaces the far-away Eikando trip and avoids a second illumination night.</span></li><li><strong>Arashiyama before 08:00, Fushimi Inari at sunset.</strong><span>Both are best at the edges of the day. Arashiyama’s bamboo grove is quiet at 07:30 and packed by 10:00. Fushimi Inari is minutes from your Airbnb and works as a sunset finish.</span></li><li><strong>Osaka gets a proper afternoon.</strong><span>Nara in the morning, Osaka Castle with time to go inside, and Dotonbori with the neon on. No hard stop at 18:00.</span></li><li><strong>Hiroshima is a lighter day on Fri Nov 27.</strong><span>Your booked Nozomi leaves Kyoto at 08:03 and returns at 20:02. The high tide is 367 cm at 11:37 and the torii floats from about 09:20 to 14:30, so arriving at Miyajima around 10:50 works. Shukkeien is off the plan, and dinner moves to the station so the 20:02 train is safe.</span></li><li><strong>Gaien ginkgo on Mon Nov 30, not Nov 23.</strong><span>The forecast peak is around Nov 26. A Monday also makes Takeshita Street and Shibuya calmer. Meiji Jingu, Harajuku and Shibuya Sky share the same day.</span></li><li><strong>Rikugien at night, 7 minutes from your Airbnb.</strong><span>Its night illumination runs Nov 25 to Dec 6, and it sits right by Komagome Station. You get a first-rate autumn evening on an easy arrival night.</span></li></ul></div>
+
+  <h2 id="giveup">What you give up</h2>
+  <div class="panel"><ul class="cmp"><li><strong>Eikando’s night illumination.</strong><span>Replaced by Kodai-ji, which sits on your Kiyomizu walk. Eikando is better for maples but a long cross-town trip.</span></li><li><strong>Umeda Sky and Akihabara.</strong><span>Dropped from the default. Akihabara is an optional swap for Ginza on Nov 21.</span></li><li><strong>Quick Pontocho only.</strong><span>A 20-minute walk after dinner rather than a full evening.</span></li><li><strong>Luggage forwarding.</strong><span>You haul bags on two direct Shinkansen rides. A van taxi on the awkward ends removes most of the work.</span></li><li><strong>A calmer Fuji return.</strong><span>Sunday afternoons are when the Chuo Expressway jams. You manage it by leaving after about 19:30, or by taking the 17:38 train and missing most of the lights.</span></li><li><strong>Shukkeien garden in Hiroshima.</strong><span>Dropped to let you leave Kyoto about an hour later. Miyajima’s Daisho-in and Momijidani Park give you the maples instead.</span></li></ul></div>
+
+  <h2 id="home">Your three home stations</h2>
+  <div class="panel"><ul class="basics"><li><strong>Mukojima, Sumida (Nov 20 to 24).</strong><span>Your stations are Oshiage (Skytree) on the Hanzomon Line (Z14), Toei Asakusa Line (A20) and Keisei Oshiage Line, and Tokyo Skytree Station on the Tobu Skytree Line (TS02). They sit across from each other. Roughly 7 to 15 minutes on foot from the Airbnb. Hikifune on the Tobu line is about 12 minutes.</span></li><li><strong>Fukakusa, Fushimi Ward (Nov 24 to 28).</strong><span>JR Inari Station on the JR Nara Line is right in front of Fushimi Inari Taisha, and Keihan Fukakusa and Fushimi-Inari stations are on the Keihan Main Line. Confirm the exact walking time to each on a map; I used JR Inari for trips to Kyoto Station and Keihan for Gion.</span></li><li><strong>Nakazato, Kita City (Nov 28 to Dec 1).</strong><span>Komagome Station: JR Yamanote Line (JY10) and Tokyo Metro Namboku Line (N14). Rikugien is about 7 minutes from the South Exit. Confirm the walk to your Airbnb on a map.</span></li></ul></div>
+
+  <h2 id="basics">Reading the train signs</h2>
+  <div class="panel"><ul class="basics"><li><strong>Match the destination board.</strong><span>Trains show their final stop, not the next one. Each step lists a “Toward” cue. Match it, or ride the train that stops next at the stations I name.</span></li><li><strong>Local, Rapid, Express.</strong><span>Faster trains skip small stations. If your stop is small (Inari, Fukakusa, Tofukuji), take a Local and check Google Maps.</span></li><li><strong>Station codes.</strong><span>Signs show a letter and number, such as G09 for Ginza on the Ginza Line. The number counts stations, so a bigger number means farther along the line.</span></li><li><strong>Exits matter.</strong><span>Big stations have dozens. Google Maps shows the exit. Follow the yellow signs, and use elevators with bags.</span></li><li><strong>Pay with an IC card.</strong><span>Suica or PASMO works on Tokyo, Kyoto, Osaka and Hiroshima transit, but not for the Shinkansen or highway bus tickets, which you already hold or book separately.</span></li><li><strong>Avoid 07:30 to 09:00 with bags.</strong><span>Commuter trains at that hour are packed. Your bags are only on trains on Nov 24 and Nov 28, so leave early or take a taxi for those two mornings.</span></li></ul></div>
+
+  <h2 id="book">Book these</h2>
+  <div class="panel"><ul class="book"><li><span class="w">Booked</span><span>Shinkansen: Nov 24 Tokyo 10:00 to Kyoto 12:15. Nov 27 Kyoto 08:03 (Nozomi 99) to Hiroshima 09:39, and Hiroshima 20:02 to Kyoto 21:37. Nov 28 Kyoto 10:01 to Tokyo 12:15.</span></li><li><span class="w">Booked</span><span>Highway buses on Sun Nov 22: Busta Shinjuku 07:15 out, and Kawaguchiko 19:55 back.</span></li><li><span class="w">Booked</span><span>teamLab Planets, Mon Nov 23, 15:00.</span></li><li><span class="w">Booked</span><span>Rikugien night illumination, Sat Nov 28. Show the ticket on your phone at the Main Gate.</span></li><li><span class="w">Optional</span><span>Shibuya Sky for Mon Nov 30: no ticket. Watch the sites for cancellations around the end of Nov 29 and the morning of Nov 30. If you get one, a daytime slot before 15:00 costs ¥2,700 each.</span></li><li><span class="w">Today</span><span>Shigetsu lunch inside Tenryu-ji for Wed Nov 25, about 11:15. Sets sell out up to a month ahead.</span></li><li><span class="w">Today</span><span>Farewell dinner at Yasaiya Teppanyaki, Akasaka, for Mon Nov 30, 18:30. Ask for the vegetarian menu.</span></li><li><span class="w">This week</span><span>Ain Soph Journey reservation for Sun Nov 29, 19:00, on TableCheck (tablecheck.com/en/shops/ain-soph-journey/reserve).</span></li><li><span class="w">Nov 29</span><span>Book the Dec 1 van taxi for 07:00 on the GO app or Uber.</span></li><li><span class="w">Week of</span><span>Check the Fuji forecast for Nov 22, the Miyajima tide table for Nov 27, and Hase-dera’s 2026 night illumination dates.</span></li></ul></div>
+
+  <h2 id="eat">Eating as two vegetarians and two meat eaters</h2>
+  <div class="panel"><ul class="eat"><li><strong>Say it first.</strong><span>“Bejitarian desu. Niku, sakana, dashi nuki de onegaishimasu.” (I’m vegetarian. No meat, fish or fish stock, please.) Show the Japanese on your phone if the shop is busy.</span></li><li><strong>Dashi hides everywhere.</strong><span>Miso soup, udon broth, stews and many sauces use fish stock (dashi) or bonito flakes (katsuobushi). Ask even for “vegetable” dishes. Okonomiyaki and takoyaki are topped with bonito flakes; say “katsuobushi nuki.”</span></li><li><strong>Pork hides in plain sight.</strong><span>Gyoza fillings, curry roux, fried rice and ramen toppings often include pork or lard. “Vegetable” curry can still be made with animal-based roux. Ask once, nod, and trust the answer.</span></li><li><strong>Good mixed-group formats.</strong><span>Okonomiyaki, ramen shops with a vegan bowl, Indian curry, pizza and shojin ryori all work because each person can order differently at one table.</span></li><li><strong>Cash is still king.</strong><span>Many small ramen shops and temples take only cash. Keep ¥10,000 to ¥20,000 on you.</span></li></ul></div>
+
+  
+    <section class="day base-tokyo1" id="d-nov-20">
+      <header class="dh">
+        <div class="date"><span class="n">20</span><span class="m">Nov Fri</span></div>
+        <div class="ht">
+          <h3>Land at Haneda, settle in</h3>
+          <p class="stay">Sleep: Mukojima, Sumida (Tokyo Skytree side)  |  Load: Easy</p>
+        </div>
+      </header>
+      <p class="summary">NH109 lands at Haneda Terminal 2 at 17:40. Train to Oshiage, a light dinner, early sleep. Tomorrow is a Tokyo classics day that starts with Senso-ji at dawn.</p>
+      <ol class="tl">
+        <li class="row k-plain">
+          <div class="t">Before you fly</div>
+          <div class="b">
+            <h4>Fill in Visit Japan Web</h4>
+            <p>Complete immigration and customs on Visit Japan Web and save the QR codes. Your ticket notes that Haneda terminals can change by flight, so recheck Terminal 2 on departure day.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">17:40</div>
+          <div class="b">
+            <h4>Land at Haneda</h4>
+            <p>Immigration, baggage and customs usually take 60 to 90 minutes. Each ticket shows one checked bag up to 23 kg and one carry-on up to 10 kg.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">19:15</div>
+          <div class="b">
+            <h4>Keikyu train to Oshiage</h4>
+            <p>Keikyu Airport Line from Haneda Airport Terminal 1·2 Station. Many trains run straight onto the Toei Asakusa Line to <strong>Oshiage</strong> with no change; others change across one platform at Sengakuji. About 55 minutes and about ¥670 each. A taxi would save 15 to 25 minutes and cost ¥6,000 or more extra.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#E5171F">
+<div class="ln">Keikyu Airport Line, through to the Toei Asakusa Line</div>
+<dl>
+<dt>Board</dt><dd>Haneda Airport Terminal 1·2 Station (Terminal 2 for NH109)</dd>
+<dt>Toward</dt><dd>Any train whose board says Oshiage, Narita Airport, Imba-Nihon-idai or Aoto; they run through to Oshiage</dd>
+<dt>Ride</dt><dd>About 50 to 55 minutes, via Asakusa</dd>
+<dt>Get off</dt><dd class="off">Oshiage (Skytree), Toei Asakusa Line A20</dd>
+<dd class="tip">Some trains need a cross-platform change at Sengakuji; Google Maps shows which. Take the elevators; follow signs to Tokyo Skytree.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">20:15</div>
+          <div class="b">
+            <h4>Walk to the Airbnb</h4>
+            <p>From Oshiage (Skytree) it is roughly 7 to 15 minutes on foot. Use the elevator exits with the bags.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">20:45</div>
+          <div class="b">
+            <h4>Light dinner</h4>
+            <p>Convenience-store onigiri and egg sandwiches work for everyone. Vegetarians: check the label for fish or meat.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">22:00</div>
+          <div class="b">
+            <h4>Sleep</h4>
+            <p>Pack a day bag for tomorrow: comfortable shoes, layers, a power bank.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li></ol>
+      
+    </section>
+    <section class="day base-tokyo1" id="d-nov-21">
+      <header class="dh">
+        <div class="date"><span class="n">21</span><span class="m">Nov Sat</span></div>
+        <div class="ht">
+          <h3>Senso-ji at dawn, Ueno, Ginza, Tokyo Tower</h3>
+          <p class="stay">Sleep: Mukojima, Sumida  |  Load: Full</p>
+        </div>
+      </header>
+      <p class="summary">Your acclimatization day in Tokyo. Senso-ji at dawn, an autumn park and street food at midday, city lights at night. Saturday means crowds at Ueno and Ameyoko, so Senso-ji goes first and you can skip anything that feels too much.</p>
+      <ol class="tl">
+        <li class="row k-plain">
+          <div class="t">06:30</div>
+          <div class="b">
+            <h4>Wake up, small bite</h4>
+            <p>Coffee and a konbini egg sandwich or fruit. A proper breakfast comes after the temple.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">06:50</div>
+          <div class="b">
+            <h4>Walk to Asakusa</h4>
+            <p>About 25 minutes on foot across the Sumida River by Azuma-bashi, with the Skytree behind you. Or ride one stop on the Tobu Skytree Line from Tokyo Skytree Station to Asakusa, about 3 minutes.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#0F6CB5">
+<div class="ln">Tobu Skytree Line (the short option)</div>
+<dl>
+<dt>Board</dt><dd>Tokyo Skytree Station (TS02)</dd>
+<dt>Toward</dt><dd>Asakusa (any train)</dd>
+<dt>Ride</dt><dd>1 stop, about 3 minutes</dd>
+<dt>Get off</dt><dd class="off">Asakusa (TS01)</dd>
+<dd class="tip">This is the Tobu station, not the Metro one. Kaminarimon is about 5 minutes on foot.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">07:15</div>
+          <div class="b">
+            <h4>Kaminarimon and Nakamise Street</h4>
+            <p>The shops are still shuttered, so you get the lanterns and the big gate without the crowd. Photos now, shopping later.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">07:35</div>
+          <div class="b">
+            <h4>Senso-ji</h4>
+            <p>Hozomon gate, incense cauldron, main hall, five-story pagoda, then Asakusa Shrine next door. The main hall opens early. Be gone by 08:45, when the tour buses arrive.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">08:50</div>
+          <div class="b">
+            <h4>Breakfast near the temple</h4>
+            <p>Sekai Cafe sits beside Senso-ji, serves meat, and lets you customize dishes to be vegetarian. Hours vary, so check it is open. Fallback: a bakery or konbini.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">09:45</div>
+          <div class="b">
+            <h4>Nakamise Street, now open</h4>
+            <p>Try fresh ningyo-yaki cakes and age-manju (fried buns). Both are meat free.</p>
+            <div class="chips"><span class="chip c-veg">Vegetarian ok</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">10:30</div>
+          <div class="b">
+            <h4>Ginza Line to Ueno</h4>
+            <p>About 6 minutes. Ameyoko is right next to Ueno Station, not far from Asakusa at all.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#F39700">
+<div class="ln">Tokyo Metro Ginza Line</div>
+<dl>
+<dt>Board</dt><dd>Asakusa (G19), next to Kaminarimon</dd>
+<dt>Toward</dt><dd>Shibuya</dd>
+<dt>Ride</dt><dd>3 stops (Tawaramachi, Inaricho), about 6 minutes</dd>
+<dt>Get off</dt><dd class="off">Ueno (G16)</dd>
+<dd class="tip">For Ueno Park follow the Park Exit signs. For T’s TanTan, go to JR Ueno Station.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">10:50</div>
+          <div class="b">
+            <h4>Ueno Park</h4>
+            <p>Toshogu Shrine, Shinobazu Pond and Bentendo, then the ginkgo and maple paths. Color is early today: the forecast peak for Tokyo’s ginkgo is around Nov 26 and for maples around Nov 29.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">12:30</div>
+          <div class="b">
+            <h4>Lunch</h4>
+            <p><strong>Everyone:</strong> T’s TanTan inside JR Ueno Station serves plant-based ramen and tantan noodles that meat eaters usually enjoy. <strong>Or split:</strong> vegetarians at T’s TanTan, meat eaters at the Ameyoko stalls next door.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-veg">Vegetarian ok</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">13:30</div>
+          <div class="b">
+            <h4>Ameyoko Market</h4>
+            <p>A 5-minute walk from the station and packed on a Saturday. Vegetarians: fruit skewers, roasted sweet potato, dried fruit, sweets. The savory stalls are mostly meat and seafood.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">14:45</div>
+          <div class="b">
+            <h4>Ginza Line to Ginza</h4>
+            <p>About 15 minutes.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#F39700">
+<div class="ln">Tokyo Metro Ginza Line</div>
+<dl>
+<dt>Board</dt><dd>Ueno (G16)</dd>
+<dt>Toward</dt><dd>Shibuya</dd>
+<dt>Ride</dt><dd>7 stops (Ueno-hirokoji, Suehirocho, Kanda, Mitsukoshimae, Nihombashi, Kyobashi), about 15 minutes</dd>
+<dt>Get off</dt><dd class="off">Ginza (G09)</dd>
+
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">15:10</div>
+          <div class="b">
+            <h4>Ginza stroll</h4>
+            <p>Chuo-dori, Ginza Six, Itoya stationery, the Wako clock tower. Chuo-dori is often car-free on weekend afternoons.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">16:45</div>
+          <div class="b">
+            <h4>Hibiya Line to Kamiyacho</h4>
+            <p>About 8 minutes, then a 7-minute walk to Tokyo Tower.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#9CAEB7">
+<div class="ln">Tokyo Metro Hibiya Line</div>
+<dl>
+<dt>Board</dt><dd>Ginza (H08)</dd>
+<dt>Toward</dt><dd>Naka-meguro</dd>
+<dt>Ride</dt><dd>3 stops (Hibiya, Kasumigaseki), about 8 minutes</dd>
+<dt>Get off</dt><dd class="off">Kamiyacho (H05)</dd>
+<dd class="tip">Exit 1 is closest to Tokyo Tower, about 7 minutes on foot. Follow the Tokyo Tower signs.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">17:15</div>
+          <div class="b">
+            <h4>Tokyo Tower at night</h4>
+            <p>Sunset is around 16:30, so the city is already lit when you reach the Main Deck. Allow 75 minutes. Buy tickets online or at the base.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">18:45</div>
+          <div class="b">
+            <h4>Back to Asakusa</h4>
+            <p>Hibiya Line from Kamiyacho to Ueno, then the Ginza Line to Asakusa. About 45 minutes.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#9CAEB7">
+<div class="ln">Tokyo Metro Hibiya Line</div>
+<dl>
+<dt>Board</dt><dd>Kamiyacho (H05)</dd>
+<dt>Toward</dt><dd>Kita-Senju</dd>
+<dt>Ride</dt><dd>13 stops, about 25 minutes</dd>
+<dt>Get off</dt><dd class="off">Ueno (H18)</dd>
+<dd class="tip">Change to the Ginza Line, signposted in the station.</dd>
+</dl></div><div class="leg" style="--lc:#F39700">
+<div class="ln">Tokyo Metro Ginza Line</div>
+<dl>
+<dt>Board</dt><dd>Ueno (G16)</dd>
+<dt>Toward</dt><dd>Asakusa</dd>
+<dt>Ride</dt><dd>3 stops, about 6 minutes</dd>
+<dt>Get off</dt><dd class="off">Asakusa (G19)</dd>
+<dd class="tip">Yoroiya Ramen is about 6 minutes from Asakusa Station.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">19:45</div>
+          <div class="b">
+            <h4>Dinner at Yoroiya Ramen, Asakusa</h4>
+            <p>A family-run ramen shop near Senso-ji with a vegan soy-sauce ramen and vegan gyoza, plus regular meat ramen. Cash only. Last order 20:30, closes 21:00.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">21:00</div>
+          <div class="b">
+            <h4>Home</h4>
+            <p>Too tired by 16:45? Skip Tokyo Tower and go straight to the ramen.</p>
+            <div class="chips"></div>
+            <div class="route"><div class="leg" style="--lc:#0F6CB5">
+<div class="ln">Tobu Skytree Line</div>
+<dl>
+<dt>Board</dt><dd>Asakusa (TS01)</dd>
+<dt>Toward</dt><dd>Tokyo Skytree (any train)</dd>
+<dt>Ride</dt><dd>1 stop, about 3 minutes</dd>
+<dt>Get off</dt><dd class="off">Tokyo Skytree (TS02)</dd>
+<dd class="tip">Or walk about 25 minutes across Azuma-bashi.</dd>
+</dl></div></div>
+          </div>
+        </li></ol>
+      <p class="cut"><strong>If you need to cut:</strong> Cut Tokyo Tower first. Ginza is a stroll, not a must.</p>
+    </section>
+    <section class="day base-tokyo1" id="d-nov-22">
+      <header class="dh">
+        <div class="date"><span class="n">22</span><span class="m">Nov Sun</span></div>
+        <div class="ht">
+          <h3>Mt. Fuji and the maple tunnel with festival lights</h3>
+          <p class="stay">Sleep: Mukojima, Sumida  |  Load: Heavy</p>
+        </div>
+      </header>
+      <p class="summary">The leaf festival runs Nov 7 to 29, with the Momiji Corridor lit from sunset to 21:00. Your booked buses are the 07:15 out and the 19:55 back, so you reach the corridor by about 09:45 and still have time to see the lights properly. The weak spot is the Sunday-evening ride home: expect 21:40 at the earliest.</p>
+      <ol class="tl">
+        <li class="row k-plain">
+          <div class="t">Before</div>
+          <div class="b">
+            <h4>Everything is booked: pack and check</h4>
+            <p>Booked: the 07:15 highway bus out and the 19:55 bus back, both on Sun Nov 22. Pack warm layers, hat, gloves, a power bank, ¥5,000 cash each and onigiri. Late November at the lake is often near freezing after dark. Check the Fuji forecast on the night of Nov 21. If it is cloudy, you could swap with Nov 21, but your bus tickets are for Nov 22, so you would need to rebook. Check the cancellation rules first.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">05:30</div>
+          <div class="b">
+            <h4>Wake up</h4>
+            <p>Dress in layers and eat something small.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">06:05</div>
+          <div class="b">
+            <h4>Leave the Airbnb</h4>
+            <p>Oshiage to Shinjuku, about 35 to 45 minutes with one change.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#8F76D6">
+<div class="ln">Tokyo Metro Hanzomon Line</div>
+<dl>
+<dt>Board</dt><dd>Oshiage (Z14)</dd>
+<dt>Toward</dt><dd>Shibuya</dd>
+<dt>Ride</dt><dd>8 stops (Kinshicho, Sumiyoshi, Kiyosumi-shirakawa, Suitengumae, Mitsukoshimae, Otemachi, Jimbocho), about 20 minutes</dd>
+<dt>Get off</dt><dd class="off">Kudanshita (Z06)</dd>
+<dd class="tip">Follow the Toei Shinjuku Line signs, about 5 minutes inside the station.</dd>
+</dl></div><div class="leg" style="--lc:#6CBB5A">
+<div class="ln">Toei Shinjuku Line</div>
+<dl>
+<dt>Board</dt><dd>Kudanshita (S05)</dd>
+<dt>Toward</dt><dd>Shinjuku (some trains continue to Hashimoto)</dd>
+<dt>Ride</dt><dd>4 stops, about 9 minutes</dd>
+<dt>Get off</dt><dd class="off">Shinjuku (S01)</dd>
+<dd class="tip">Then follow signs to the New South Exit and Busta Shinjuku, about 12 minutes, and take the escalators to the 4th floor.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">06:50</div>
+          <div class="b">
+            <h4>Busta Shinjuku</h4>
+            <p>The highway bus terminal is connected to the south exit of Shinjuku Station. Find your gate, use the toilets and buy a drink from the konbini.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">07:15</div>
+          <div class="b">
+            <h4>Your bus to Kawaguchiko Station</h4>
+            <p>Your reserved 07:15 bus should reach Kawaguchiko Station at about 09:00 on a normal run. Show the QR ticket at the gate. Outbound traffic early on a Sunday is usually light.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span><span class="chip c-book">Book ahead</span></div>
+            <div class="route"><div class="leg" style="--lc:#6C757D">
+<div class="ln">Highway bus (Keio, Fujikyu or JR Bus)</div>
+<dl>
+<dt>Board</dt><dd>Busta Shinjuku, 4th floor, gate shown on your ticket</dd>
+<dt>Toward</dt><dd>Kawaguchiko Station (some buses stop at Fuji-Q Highland first)</dd>
+<dt>Ride</dt><dd>About 1 hour 45 minutes, traffic permitting</dd>
+<dt>Get off</dt><dd class="off">Kawaguchiko Station</dd>
+<dd class="tip">Stay on until the sign says Kawaguchiko Station.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">09:00</div>
+          <div class="b">
+            <h4>Arrive at Kawaguchiko Station</h4>
+            <p>Take first Fuji photos in the station square. Buy Red Line tickets or a day pass at the sightseeing bus counter and go to bus stop 1. Single rides were about ¥380 when last published.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">09:20</div>
+          <div class="b">
+            <h4>Red Line to the Kubota Itchiku Museum stop</h4>
+            <p>About 20 minutes. This is the nearest stop to the Momiji Corridor, with a 5-minute walk.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#D6001C">
+<div class="ln">Kawaguchiko Sightseeing Bus, Red Line</div>
+<dl>
+<dt>Board</dt><dd>Kawaguchiko Station, bus stop 1</dd>
+<dt>Toward</dt><dd>Red Line, toward Oishi Park (the last stop)</dd>
+<dt>Ride</dt><dd>About 20 minutes</dd>
+<dt>Get off</dt><dd class="off">Kubota Itchiku Museum bus stop</dd>
+<dd class="tip">The Momiji Corridor is about 5 minutes on foot.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">09:45</div>
+          <div class="b">
+            <h4>Momiji Corridor, before the crowd</h4>
+            <p>About 150 meters of about 60 maples along the Nashigawa stream, free to enter. Take the bridge angle first. Weekend crowds build from about 10:30, so you have about an hour.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">10:50</div>
+          <div class="b">
+            <h4>Red Line to Oishi Park</h4>
+            <p>The last stop, number 20, about 10 to 15 minutes further on.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#D6001C">
+<div class="ln">Kawaguchiko Sightseeing Bus, Red Line</div>
+<dl>
+<dt>Board</dt><dd>Kubota Itchiku Museum stop (the side heading away from the station)</dd>
+<dt>Toward</dt><dd>Oishi Park</dd>
+<dt>Ride</dt><dd>About 10 to 15 minutes</dd>
+<dt>Get off</dt><dd class="off">Oishi Park / Natural Living Center (stop 20, the last stop)</dd>
+<dd class="tip">The park is about 2 minutes on foot.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">11:10</div>
+          <div class="b">
+            <h4>Oishi Park</h4>
+            <p>An open lakeside garden with the widest Fuji view of the day, if the clouds cooperate. A separate “Momiji tunnel” lies on the road west of the park, about 2 km or 25 minutes on foot, if you want Fuji framed by maples. It adds an hour and is not on the bus line.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">12:30</div>
+          <div class="b">
+            <h4>Red Line back to the station</h4>
+            <p>About 30 minutes. Sit on the right side for Fuji. Arrive around 13:00.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#D6001C">
+<div class="ln">Kawaguchiko Sightseeing Bus, Red Line</div>
+<dl>
+<dt>Board</dt><dd>Oishi Park (stop 20)</dd>
+<dt>Toward</dt><dd>Kawaguchiko Station</dd>
+<dt>Ride</dt><dd>About 30 minutes</dd>
+<dt>Get off</dt><dd class="off">Kawaguchiko Station</dd>
+<dd class="tip">Sit on the right side for the Fuji view.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">13:10</div>
+          <div class="b">
+            <h4>Lunch near the station</h4>
+            <p>Yamanashi’s signature dish is <strong>houtou</strong>, thick noodles in miso stew with pumpkin and vegetables. The stock usually contains fish and often pork. Vegetarians should ask “Niku to sakana nuki de dekimasu ka?” If the answer is no, choose curry or pizza near the station. Pack konbini onigiri as a backup.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">14:40</div>
+          <div class="b">
+            <h4>Red Line to the ropeway stop</h4>
+            <p>Bus stop number 9, about 10 minutes.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#D6001C">
+<div class="ln">Kawaguchiko Sightseeing Bus, Red Line</div>
+<dl>
+<dt>Board</dt><dd>Kawaguchiko Station, bus stop 1</dd>
+<dt>Toward</dt><dd>Red Line</dd>
+<dt>Ride</dt><dd>About 10 minutes</dd>
+<dt>Get off</dt><dd class="off">Sightseeing Boat / Ropeway Entrance (stop 9)</dd>
+<dd class="tip">The ropeway entrance is across the street.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">14:55</div>
+          <div class="b">
+            <h4>Mt. Fuji Panoramic Ropeway</h4>
+            <p>A short ride to the top of Mt. Tenjo with a Fuji view across the lake. About ¥1,000 round trip and open until about 18:00 on the last timetable I found, but confirm.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">16:00</div>
+          <div class="b">
+            <h4>Red Line to the Kubota Itchiku Museum stop</h4>
+            <p>About 15 minutes. Arrive around 16:15.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#D6001C">
+<div class="ln">Kawaguchiko Sightseeing Bus, Red Line</div>
+<dl>
+<dt>Board</dt><dd>Ropeway stop (9)</dd>
+<dt>Toward</dt><dd>Red Line, toward Oishi Park</dd>
+<dt>Ride</dt><dd>About 15 minutes</dd>
+<dt>Get off</dt><dd class="off">Kubota Itchiku Museum stop</dd>
+
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">16:20</div>
+          <div class="b">
+            <h4>Corridor at golden hour</h4>
+            <p>Light through the maples before dusk. Sunset is around 16:40.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">16:40</div>
+          <div class="b">
+            <h4>The lights come on</h4>
+            <p>The corridor is lit from sunset until 21:00. Stay for about 90 minutes. Festival stalls sell hot food and drinks, mostly meat and noodles, with sweet potato and sweets for vegetarians.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">18:10</div>
+          <div class="b">
+            <h4>Red Line back to the station</h4>
+            <p>The last Red Line bus from the museum stop leaves at 18:32. Take the one around 18:10 to be safe.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span><span class="chip c-check">Confirm on the day</span></div>
+            <div class="route"><div class="leg" style="--lc:#D6001C">
+<div class="ln">Kawaguchiko Sightseeing Bus, Red Line</div>
+<dl>
+<dt>Board</dt><dd>Kubota Itchiku Museum stop (the side toward the station)</dd>
+<dt>Toward</dt><dd>Kawaguchiko Station</dd>
+<dt>Ride</dt><dd>About 20 minutes</dd>
+<dt>Get off</dt><dd class="off">Kawaguchiko Station</dd>
+<dd class="tip">The last bus from this stop is 18:32.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">18:40</div>
+          <div class="b">
+            <h4>Dinner near Kawaguchiko Station</h4>
+            <p>Same houtou advice as lunch. Eat before the bus. You have time: the bus is at 19:55.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">19:55</div>
+          <div class="b">
+            <h4>Your bus to Shinjuku</h4>
+            <p>Be at the stop by 19:40. This reserved 19:55 bus is scheduled to reach Busta Shinjuku at about 21:40, but Sunday evening traffic can add 30 to 60 minutes or more.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span><span class="chip c-book">Book ahead</span></div>
+            <div class="route"><div class="leg" style="--lc:#6C757D">
+<div class="ln">Highway bus</div>
+<dl>
+<dt>Board</dt><dd>Kawaguchiko Station bus stop shown on your ticket</dd>
+<dt>Toward</dt><dd>Busta Shinjuku</dd>
+<dt>Ride</dt><dd>1 hour 45 minutes to about 3 hours, depending on traffic</dd>
+<dt>Get off</dt><dd class="off">Busta Shinjuku, 4th floor</dd>
+<dd class="tip">Evening departures after about 19:30 usually miss the worst jam.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">22:30</div>
+          <div class="b">
+            <h4>Home</h4>
+            <p>About 40 minutes from Shinjuku. Tomorrow starts at 08:30.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#6CBB5A">
+<div class="ln">Toei Shinjuku Line</div>
+<dl>
+<dt>Board</dt><dd>Shinjuku (S01)</dd>
+<dt>Toward</dt><dd>Motoyawata</dd>
+<dt>Ride</dt><dd>4 stops, about 9 minutes</dd>
+<dt>Get off</dt><dd class="off">Kudanshita (S05)</dd>
+<dd class="tip">Change to the Hanzomon Line.</dd>
+</dl></div><div class="leg" style="--lc:#8F76D6">
+<div class="ln">Tokyo Metro Hanzomon Line</div>
+<dl>
+<dt>Board</dt><dd>Kudanshita (Z06)</dd>
+<dt>Toward</dt><dd>Oshiage (trains toward Oshiage)</dd>
+<dt>Ride</dt><dd>8 stops, about 20 minutes</dd>
+<dt>Get off</dt><dd class="off">Oshiage (Z14)</dd>
+<dd class="tip">Check the last train if you are returning very late.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">Option B</div>
+          <div class="b">
+            <h4>If you decide to skip the late bus</h4>
+            <p>A train home at about 17:38 (a 2025 weekend time; confirm) avoids road traffic, but you would forfeit your 19:55 bus ticket unless it is refundable, and you would see only the first minutes of the lights. About ¥4,200 each.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span><span class="chip c-book">Book ahead</span><span class="chip c-check">Confirm on the day</span></div>
+            <div class="route"><div class="leg" style="--lc:#4B7F52">
+<div class="ln">Fuji Excursion 48 (limited express, reserved seat)</div>
+<dl>
+<dt>Board</dt><dd>Kawaguchiko Station (check the board for the platform)</dd>
+<dt>Toward</dt><dd>Shinjuku, direct</dd>
+<dt>Ride</dt><dd>About 2 hours, no change</dd>
+<dt>Get off</dt><dd class="off">Shinjuku (JR)</dd>
+<dd class="tip">Weekend and holiday departure was 17:38 on a 2025 timetable; confirm the Nov 22 time.</dd>
+</dl></div></div>
+          </div>
+        </li></ol>
+      <p class="cut"><strong>If you need to cut:</strong> If rain or cloud kills the Fuji view, skip the ropeway and add the Kubota Itchiku Art Museum.</p>
+    </section>
+    <section class="day base-tokyo1" id="d-nov-23">
+      <header class="dh">
+        <div class="date"><span class="n">23</span><span class="m">Nov Mon</span></div>
+        <div class="ht">
+          <h3>Shinjuku Gyoen, teamLab Planets, Odaiba at night</h3>
+          <p class="stay">Sleep: Mukojima, Sumida  |  Load: Full</p>
+        </div>
+      </header>
+      <p class="summary">A national holiday after a late Fuji night, so the day starts at 08:30. Shinjuku Gyoen is open today and closed on Tue Nov 24 and Mon Nov 30, so today is its day. teamLab Planets and Odaiba’s bay lights fill the afternoon and night. Tomorrow’s Shinkansen leaves at 10:00, so you are home by 21:15.</p>
+      <ol class="tl">
+        <li class="row k-plain">
+          <div class="t">07:30</div>
+          <div class="b">
+            <h4>Wake and eat</h4>
+            <p>A late start after the Fuji night. Pack a day bag and shorts or rolled trousers for teamLab.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">08:30</div>
+          <div class="b">
+            <h4>To Shinjuku Gyoen</h4>
+            <p>About 35 to 40 minutes with one change.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#8F76D6">
+<div class="ln">Tokyo Metro Hanzomon Line</div>
+<dl>
+<dt>Board</dt><dd>Oshiage (Z14)</dd>
+<dt>Toward</dt><dd>Shibuya</dd>
+<dt>Ride</dt><dd>8 stops, about 20 minutes</dd>
+<dt>Get off</dt><dd class="off">Kudanshita (Z06)</dd>
+
+</dl></div><div class="leg" style="--lc:#6CBB5A">
+<div class="ln">Toei Shinjuku Line</div>
+<dl>
+<dt>Board</dt><dd>Kudanshita (S05)</dd>
+<dt>Toward</dt><dd>Shinjuku</dd>
+<dt>Ride</dt><dd>3 stops, about 7 minutes</dd>
+<dt>Get off</dt><dd class="off">Shinjuku-sanchome (S02)</dd>
+<dd class="tip">Walk about 10 minutes to Shinjuku Gate. Or change to the Marunouchi Line for one stop to Shinjuku-gyoemmae, then 5 minutes on foot.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">09:30</div>
+          <div class="b">
+            <h4>Shinjuku Gyoen</h4>
+            <p>A national garden with a Japanese garden, ginkgo and maples. Admission ¥500. Open today only in this stretch; it is closed Nov 24 and Nov 30. Hours are about 09:00 to 16:00; confirm. Allow 2.5 hours.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">12:15</div>
+          <div class="b">
+            <h4>Lunch near Shinjuku-sanchome</h4>
+            <p>Any ramen or curry shop with an English picture menu works. CoCo Ichibanya has vegetable and meat curries (ask about the roux). Fully vegan Ain Soph Journey is also nearby (lunch 11:30 to 16:00).</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">13:30</div>
+          <div class="b">
+            <h4>To Toyosu</h4>
+            <p>About 50 minutes with changes, ending on the Yurikamome to Shin-Toyosu. teamLab Planets is a 1-minute walk from the station.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#E60012">
+<div class="ln">Tokyo Metro Marunouchi Line</div>
+<dl>
+<dt>Board</dt><dd>Shinjuku-gyoemmae (M10)</dd>
+<dt>Toward</dt><dd>Ikebukuro</dd>
+<dt>Ride</dt><dd>6 stops (Yotsuya-sanchome, Yotsuya, Akasaka-mitsuke, Kokkai-gijidomae, Kasumigaseki), about 14 minutes</dd>
+<dt>Get off</dt><dd class="off">Ginza (M16)</dd>
+<dd class="tip">Change to the Ginza Line, signposted in the station.</dd>
+</dl></div><div class="leg" style="--lc:#F39700">
+<div class="ln">Tokyo Metro Ginza Line</div>
+<dl>
+<dt>Board</dt><dd>Ginza (G09)</dd>
+<dt>Toward</dt><dd>Asakusa</dd>
+<dt>Ride</dt><dd>1 stop, about 2 minutes</dd>
+<dt>Get off</dt><dd class="off">Shimbashi (G08)</dd>
+<dd class="tip">Walk to the Yurikamome platform on the upper level.</dd>
+</dl></div><div class="leg" style="--lc:#2D69B3">
+<div class="ln">Yurikamome</div>
+<dl>
+<dt>Board</dt><dd>Shimbashi (U01)</dd>
+<dt>Toward</dt><dd>Toyosu</dd>
+<dt>Ride</dt><dd>About 25 minutes</dd>
+<dt>Get off</dt><dd class="off">Shin-Toyosu</dd>
+<dd class="tip">teamLab Planets is a 1-minute walk from the station.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">14:45</div>
+          <div class="b">
+            <h4>teamLab Planets</h4>
+            <p>Booked for 15:00. Arrive at the entrance by about 14:45. Wear shorts or roll trousers because you wade through water, barefoot. Allow two hours.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">17:15</div>
+          <div class="b">
+            <h4>Dinner at LaLaport Toyosu</h4>
+            <p>A big mall with many restaurants, so a mixed table is easy. Decide together when you arrive.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">18:15</div>
+          <div class="b">
+            <h4>Yurikamome to Odaiba</h4>
+            <p>About 15 minutes.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#2D69B3">
+<div class="ln">Yurikamome</div>
+<dl>
+<dt>Board</dt><dd>Shin-Toyosu</dd>
+<dt>Toward</dt><dd>Shimbashi</dd>
+<dt>Ride</dt><dd>About 15 to 18 minutes</dd>
+<dt>Get off</dt><dd class="off">Odaiba-kaihin-koen (Odaiba Seaside Park)</dd>
+<dd class="tip">The Statue of Liberty replica and the Rainbow Bridge view are a 3 to 5 minute walk.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">18:45</div>
+          <div class="b">
+            <h4>Odaiba Seaside Park</h4>
+            <p>Rainbow Bridge, the Statue of Liberty replica and the bay lights.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">20:15</div>
+          <div class="b">
+            <h4>Home</h4>
+            <p>Yurikamome to Shimbashi, then the Toei Asakusa Line straight to Oshiage. About 45 minutes in all.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#2D69B3">
+<div class="ln">Yurikamome</div>
+<dl>
+<dt>Board</dt><dd>Odaiba-kaihin-koen</dd>
+<dt>Toward</dt><dd>Shimbashi</dd>
+<dt>Ride</dt><dd>5 stops, about 10 minutes</dd>
+<dt>Get off</dt><dd class="off">Shimbashi (U01)</dd>
+<dd class="tip">Follow signs to the Toei Asakusa Line.</dd>
+</dl></div><div class="leg" style="--lc:#E85298">
+<div class="ln">Toei Asakusa Line</div>
+<dl>
+<dt>Board</dt><dd>Shimbashi (A10)</dd>
+<dt>Toward</dt><dd>Oshiage (trains also show Narita Airport, Aoto or Imba-Nihon-idai)</dd>
+<dt>Ride</dt><dd>10 stops, about 20 minutes</dd>
+<dt>Get off</dt><dd class="off">Oshiage (A20)</dd>
+
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">21:15</div>
+          <div class="b">
+            <h4>Pack for the Shinkansen</h4>
+            <p>Leave the Airbnb at 08:20 tomorrow. Charge your phone and set two alarms.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li></ol>
+      <p class="cut"><strong>If you need to cut:</strong> Skip Odaiba and go straight home from Toyosu. If you are worn out, skip the garden and start at teamLab.</p>
+    </section>
+    <section class="day base-kyoto" id="d-nov-24">
+      <header class="dh">
+        <div class="date"><span class="n">24</span><span class="m">Nov Tue</span></div>
+        <div class="ht">
+          <h3>Tokyo to Kyoto, Higashiyama after dark</h3>
+          <p class="stay">Sleep: Fukakusa, Fushimi Ward, Kyoto  |  Load: Full</p>
+        </div>
+      </header>
+      <p class="summary">Your booked Shinkansen leaves Tokyo at 10:00 and arrives at 12:15. You carry the bags on this direct train, drop them at the Airbnb, then do the whole Higashiyama evening in one walk: Kiyomizu-dera at sunset, Kodai-ji’s night illumination, Gion dinner. Kiyomizu’s night opening runs Nov 21 to 30 and Kodai-ji’s runs to Dec 13.</p>
+      <ol class="tl">
+        <li class="row k-plain">
+          <div class="t">08:20</div>
+          <div class="b">
+            <h4>Leave the Airbnb</h4>
+            <p>Check out following the host’s instructions. Your checked bags are within 158 cm, so they are under the Shinkansen’s 160 cm threshold. A van taxi to Tokyo Station (about 20 minutes) saves the Hanzomon Line and the Otemachi walk if you want it.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">08:45</div>
+          <div class="b">
+            <h4>To Tokyo Station</h4>
+            <p>Toei Asakusa Line from Oshiage to Nihombashi, then about a 10-minute walk to Tokyo Station’s Yaesu side. Aim to be inside by 09:15.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#E85298">
+<div class="ln">Toei Asakusa Line</div>
+<dl>
+<dt>Board</dt><dd>Oshiage (A20)</dd>
+<dt>Toward</dt><dd>Nishi-Magome or Haneda Airport</dd>
+<dt>Ride</dt><dd>7 stops (Honjo-azumabashi, Asakusa, Kuramae, Asakusabashi, Higashi-nihombashi, Ningyocho), about 15 minutes</dd>
+<dt>Get off</dt><dd class="off">Nihombashi (A13)</dd>
+<dd class="tip">Follow signs toward Tokyo Station Yaesu. About a 10-minute walk to the Yaesu side, where the Shinkansen gates are. Alternative: Hanzomon Line to Otemachi, then a longer underground walk to Tokyo Station.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">09:20</div>
+          <div class="b">
+            <h4>Breakfast and ekiben</h4>
+            <p>T’s TanTan on Tokyo Ramen Street serves plant-based ramen (check opening time). Or buy sandwiches, fruit and ekiben inside the station.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">10:00</div>
+          <div class="b">
+            <h4>Shinkansen to Kyoto (your ticket)</h4>
+            <p>Departs 10:00, arrives 12:15. Put the bags in the luggage space at the car end or behind your last-row seats. If your seat is a window D or E, Mt. Fuji appears about 45 minutes in.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#003DA5">
+<div class="ln">Tokaido Shinkansen</div>
+<dl>
+<dt>Board</dt><dd>Tokyo Station, Tokaido Shinkansen platforms 14 to 19 (your ticket and the board show the number)</dd>
+<dt>Toward</dt><dd>Shin-Osaka or beyond (Nozomi)</dd>
+<dt>Ride</dt><dd>2 hours 15 minutes</dd>
+<dt>Get off</dt><dd class="off">Kyoto, Shinkansen platforms 11 to 14</dd>
+<dd class="tip">Exit toward the Hachijo (south) side or follow signs to the JR Kyoto Line.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">12:15</div>
+          <div class="b">
+            <h4>Arrive Kyoto Station</h4>
+            <p>Shinkansen platforms are on the Hachijo (south) side.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">12:30</div>
+          <div class="b">
+            <h4>JR Nara Line to Inari, then walk to the Airbnb</h4>
+            <p>About 5 minutes by train and a short walk. Ask the host about an early bag drop. If not, use lockers at Kyoto Station.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span><span class="chip c-check">Confirm on the day</span></div>
+            <div class="route"><div class="leg" style="--lc:#4B7F52">
+<div class="ln">JR Nara Line</div>
+<dl>
+<dt>Board</dt><dd>Kyoto Station (follow the signs for Nara or Uji)</dd>
+<dt>Toward</dt><dd>Nara</dd>
+<dt>Ride</dt><dd>2 stops (Tofukuji, Inari), about 5 minutes</dd>
+<dt>Get off</dt><dd class="off">Inari</dd>
+<dd class="tip">Take a local train. Some Rapid trains skip Tofukuji and Inari. The destination board and Google Maps show which.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">13:20</div>
+          <div class="b">
+            <h4>Keihan to Gion-Shijo</h4>
+            <p>About 15 minutes from Fukakusa.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#0A7F42">
+<div class="ln">Keihan Main Line</div>
+<dl>
+<dt>Board</dt><dd>Fukakusa (or Fushimi-Inari, one stop closer to Kyoto)</dd>
+<dt>Toward</dt><dd>Demachiyanagi</dd>
+<dt>Ride</dt><dd>About 15 minutes on a Local or Semi-Express</dd>
+<dt>Get off</dt><dd class="off">Gion-Shijo</dd>
+<dd class="tip">Express trains skip small stops. Take a Local if you are unsure.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">13:50</div>
+          <div class="b">
+            <h4>Lunch grazing at Nishiki Market</h4>
+            <p>About 15 minutes' walk west from Gion-Shijo. Meat eaters: skewers and tako-tamago. Vegetarians: tofu doughnuts, yuba, pickles, mochi and fruit. Ask about dashi in anything liquid.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">14:50</div>
+          <div class="b">
+            <h4>Walk east to Gion, Yasaka Shrine, Maruyama Park</h4>
+            <p>Cross the Kamo River by the Shijo bridge and wander Hanamikoji.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">16:00</div>
+          <div class="b">
+            <h4>Ninenzaka and Sannenzaka</h4>
+            <p>Preserved lanes on the way up. Shops close around 17:00 to 18:00, so walk them now.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">16:30</div>
+          <div class="b">
+            <h4>Kiyomizu-dera at sunset</h4>
+            <p>Admission ¥500. The wooden stage is best in the last light (sunset about 16:50), and the maples are lit afterward. Night opening is Nov 21 to 30, with extended hours to 21:30 and last entry at 21:00. If staff ask you to exit at the normal closing time, re-enter for the night session.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">17:50</div>
+          <div class="b">
+            <h4>Walk down to Kodai-ji</h4>
+            <p>About 10 minutes in lantern light.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">18:10</div>
+          <div class="b">
+            <h4>Kodai-ji night illumination</h4>
+            <p>Illuminated maples, a bamboo grove and projection mapping. Open 17:00 to 22:00 with last entry around 21:30, admission about ¥600. Allow 50 minutes.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">19:15</div>
+          <div class="b">
+            <h4>Dinner at Clover Tei, Gion</h4>
+            <p>A Gion restaurant with meat dishes and a vegetarian set of tofu steak, vegetable tempura, salad and rice. Open 11:30 to 21:30. Confirm hours.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">20:30</div>
+          <div class="b">
+            <h4>Pontocho alley</h4>
+            <p>Lantern-lit and narrow, along the Kamo River. Twenty minutes.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">21:00</div>
+          <div class="b">
+            <h4>Keihan back to Fukakusa</h4>
+            <p>About 15 minutes. Home around 21:30.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#0A7F42">
+<div class="ln">Keihan Main Line</div>
+<dl>
+<dt>Board</dt><dd>Gion-Shijo (platform toward Osaka)</dd>
+<dt>Toward</dt><dd>Yodoyabashi or Nakanoshima</dd>
+<dt>Ride</dt><dd>About 15 minutes on a Local or Semi-Express</dd>
+<dt>Get off</dt><dd class="off">Fukakusa</dd>
+<dd class="tip">If you ride an Express, change at Tofukuji or Fushimi-Inari. Check the board.</dd>
+</dl></div></div>
+          </div>
+        </li></ol>
+      <p class="cut"><strong>If you need to cut:</strong> Skip Nishiki Market if the Shinkansen is late, or skip Pontocho.</p>
+    </section>
+    <section class="day base-kyoto" id="d-nov-25">
+      <header class="dh">
+        <div class="date"><span class="n">25</span><span class="m">Nov Wed</span></div>
+        <div class="ht">
+          <h3>Arashiyama early, Kinkaku-ji, Fushimi Inari at dusk</h3>
+          <p class="stay">Sleep: Fukakusa, Fushimi Ward, Kyoto  |  Load: Full</p>
+        </div>
+      </header>
+      <p class="summary">The bamboo grove is quiet at 07:30 and packed by 10:00, so you go first thing. Fushimi Inari is also best early or late, and it is minutes from your Airbnb, so it becomes the sunset finish. Eikando drops out because Kodai-ji already gave you a night illumination.</p>
+      <ol class="tl">
+        <li class="row k-train">
+          <div class="t">06:30</div>
+          <div class="b">
+            <h4>Leave for Arashiyama</h4>
+            <p>JR Nara Line from Inari to Kyoto (5 minutes), then the JR Sagano Line to Saga-Arashiyama (about 16 minutes). Arrive about 07:20.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#4B7F52">
+<div class="ln">JR Nara Line</div>
+<dl>
+<dt>Board</dt><dd>Inari</dd>
+<dt>Toward</dt><dd>Kyoto</dd>
+<dt>Ride</dt><dd>2 stops, about 5 minutes</dd>
+<dt>Get off</dt><dd class="off">Kyoto Station</dd>
+<dd class="tip">Walk west to the Sagano Line platforms.</dd>
+</dl></div><div class="leg" style="--lc:#4B7F52">
+<div class="ln">JR Sagano Line (San-in Main Line)</div>
+<dl>
+<dt>Board</dt><dd>Kyoto Station, the platforms numbered in the 30s at the far west end</dd>
+<dt>Toward</dt><dd>Sonobe or Kameoka</dd>
+<dt>Ride</dt><dd>About 16 minutes (Nijo, Enmachi, Hanazono, Uzumasa)</dd>
+<dt>Get off</dt><dd class="off">Saga-Arashiyama</dd>
+<dd class="tip">Tenryu-ji is about 10 minutes on foot. The bamboo grove is reached through the temple’s north gate.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">07:30</div>
+          <div class="b">
+            <h4>Bamboo Grove</h4>
+            <p>Walk it before the crowd. Photos with no people in them are possible now, not later. Then follow the path toward Tenryu-ji.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">08:30</div>
+          <div class="b">
+            <h4>Tenryu-ji garden</h4>
+            <p>The garden entrance is ¥500. Autumn color around the pond is the reason to come. Allow 90 minutes.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">10:15</div>
+          <div class="b">
+            <h4>Togetsukyo Bridge and river</h4>
+            <p>A short walk along the Katsura River. Coffee break.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">11:15</div>
+          <div class="b">
+            <h4>Lunch at Shigetsu, inside Tenryu-ji</h4>
+            <p>Zen shojin ryori in a tatami hall overlooking the garden: ¥3,300, ¥5,500 or ¥8,000 sets, plus the ¥500 temple fee. Serving 11:00 to 14:00. All vegan, so meat eaters eat vegetarian once. <strong>Reserve weeks ahead.</strong> Backup: Izusen’s Sagano branch, a 20-minute walk from JR Saga-Arashiyama.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-veg">Vegetarian ok</span><span class="chip c-book">Book ahead</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">12:45</div>
+          <div class="b">
+            <h4>To Kinkaku-ji</h4>
+            <p>Taxi is about 25 to 30 minutes and roughly ¥3,500 to ¥4,500 for four people. By public transit, take the Randen tram to Kitano-Hakubaicho, then a bus; plan on 45 minutes.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#1D7E3A">
+<div class="ln">Keifuku Randen, Arashiyama Line</div>
+<dl>
+<dt>Board</dt><dd>Arashiyama (Randen)</dd>
+<dt>Toward</dt><dd>Katabiranotsuji</dd>
+<dt>Ride</dt><dd>About 15 minutes</dd>
+<dt>Get off</dt><dd class="off">Katabiranotsuji</dd>
+<dd class="tip">Change to the Kitano Line.</dd>
+</dl></div><div class="leg" style="--lc:#1D7E3A">
+<div class="ln">Keifuku Randen, Kitano Line, then City Bus</div>
+<dl>
+<dt>Board</dt><dd>Katabiranotsuji</dd>
+<dt>Toward</dt><dd>Kitano-Hakubaicho</dd>
+<dt>Ride</dt><dd>About 8 minutes, then Kyoto City Bus 204 or 205 to Kinkakuji-michi, about 8 minutes</dd>
+<dt>Get off</dt><dd class="off">Kinkakuji-michi</dd>
+<dd class="tip">A taxi from Arashiyama is simpler: about 25 to 30 minutes.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">13:30</div>
+          <div class="b">
+            <h4>Kinkaku-ji</h4>
+            <p>Open 09:00 to 17:00. One hour is enough. The Golden Pavilion looks best in low afternoon light.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">14:45</div>
+          <div class="b">
+            <h4>Bus 205 to Kyoto Station, then JR Nara Line to Inari</h4>
+            <p>About 45 minutes by bus and 5 minutes by train. Arrive around 15:45.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#6C757D">
+<div class="ln">Kyoto City Bus 205</div>
+<dl>
+<dt>Board</dt><dd>Kinkakuji-michi</dd>
+<dt>Toward</dt><dd>Kyoto Station</dd>
+<dt>Ride</dt><dd>About 40 to 50 minutes</dd>
+<dt>Get off</dt><dd class="off">Kyoto Station</dd>
+<dd class="tip">Then walk to the JR Nara Line platforms.</dd>
+</dl></div><div class="leg" style="--lc:#4B7F52">
+<div class="ln">JR Nara Line</div>
+<dl>
+<dt>Board</dt><dd>Kyoto Station</dd>
+<dt>Toward</dt><dd>Nara</dd>
+<dt>Ride</dt><dd>2 stops, about 5 minutes</dd>
+<dt>Get off</dt><dd class="off">Inari</dd>
+<dd class="tip">Fushimi Inari’s main gate is across the street from JR Inari Station.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">16:00</div>
+          <div class="b">
+            <h4>Fushimi Inari at sunset</h4>
+            <p>Open 24 hours. Walk the senbon torii and climb to Yotsutsuji (the halfway city viewpoint), about 75 minutes up and down. Sunset is around 16:50, so you walk the tunnels in the last light. Bring a phone torch.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">17:45</div>
+          <div class="b">
+            <h4>Down for a snack</h4>
+            <p>Stalls near the base begin to close. Inari-zushi (sweet tofu pouches) is usually meat free, but ask about fish flakes.</p>
+            <div class="chips"><span class="chip c-veg">Vegetarian ok</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">18:30</div>
+          <div class="b">
+            <h4>Dinner in Gion or Kawaramachi</h4>
+            <p>Gion Tanto serves okonomiyaki with a separate vegan menu and meat versions (some guests report cross-contamination, so ask about sauces). Confirm hours. Keihan from Fushimi-Inari is about 15 minutes.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-check">Confirm on the day</span></div>
+            <div class="route"><div class="leg" style="--lc:#0A7F42">
+<div class="ln">Keihan Main Line</div>
+<dl>
+<dt>Board</dt><dd>Fushimi-Inari</dd>
+<dt>Toward</dt><dd>Demachiyanagi</dd>
+<dt>Ride</dt><dd>About 13 minutes</dd>
+<dt>Get off</dt><dd class="off">Gion-Shijo</dd>
+<dd class="tip">Or Kawaramachi on the Hankyu Line if you want that side.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">20:30</div>
+          <div class="b">
+            <h4>Home</h4>
+            <p>Early night. Tomorrow is Nara and Osaka.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#0A7F42">
+<div class="ln">Keihan Main Line</div>
+<dl>
+<dt>Board</dt><dd>Gion-Shijo (platform toward Osaka)</dd>
+<dt>Toward</dt><dd>Yodoyabashi</dd>
+<dt>Ride</dt><dd>About 13 to 15 minutes</dd>
+<dt>Get off</dt><dd class="off">Fushimi-Inari or Fukakusa, whichever is closer to the Airbnb</dd>
+
+</dl></div></div>
+          </div>
+        </li></ol>
+      <p class="cut"><strong>If you need to cut:</strong> If you need a lighter day, drop Kinkaku-ji and take the afternoon slowly at Arashiyama.</p>
+    </section>
+    <section class="day base-kyoto" id="d-nov-26">
+      <header class="dh">
+        <div class="date"><span class="n">26</span><span class="m">Nov Thu</span></div>
+        <div class="ht">
+          <h3>Nara in the morning, Osaka for the afternoon and night</h3>
+          <p class="stay">Sleep: Fukakusa, Fushimi Ward, Kyoto  |  Load: Full</p>
+        </div>
+      </header>
+      <p class="summary">Deer and the Great Buddha first, then Osaka Castle with time to go inside, and Dotonbori with the neon on. With no luggage appointment tonight, you can stay until 20:00.</p>
+      <ol class="tl">
+        <li class="row k-train">
+          <div class="t">07:30</div>
+          <div class="b">
+            <h4>Leave home</h4>
+            <p>JR Nara Line from Inari to Kyoto Station, about 5 minutes, then walk to the Kintetsu platforms.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#4B7F52">
+<div class="ln">JR Nara Line</div>
+<dl>
+<dt>Board</dt><dd>Inari</dd>
+<dt>Toward</dt><dd>Kyoto</dd>
+<dt>Ride</dt><dd>2 stops, about 5 minutes</dd>
+<dt>Get off</dt><dd class="off">Kyoto Station</dd>
+<dd class="tip">Walk to the Kintetsu platforms in the south of the station building (follow Kintetsu signs).</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">08:00</div>
+          <div class="b">
+            <h4>Kintetsu Kyoto Line to Nara</h4>
+            <p>Express takes about 45 minutes; Limited Express about 35 minutes and costs extra. Confirm the fare in Google Maps.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#B80F0A">
+<div class="ln">Kintetsu Kyoto Line</div>
+<dl>
+<dt>Board</dt><dd>Kintetsu Kyoto Station (inside Kyoto Station)</dd>
+<dt>Toward</dt><dd>Kintetsu-Nara (Express or Limited Express)</dd>
+<dt>Ride</dt><dd>About 45 minutes by Express, about 35 by Limited Express (extra fare)</dd>
+<dt>Get off</dt><dd class="off">Kintetsu-Nara</dd>
+<dd class="tip">Nara Park and Kofuku-ji are about 5 minutes on foot from the station.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">08:50</div>
+          <div class="b">
+            <h4>Nara Park and the deer</h4>
+            <p>Buy shika-senbei (deer crackers) from a vendor. Bow, wait for the bow back, and hold the crackers up. Kofuku-ji’s five-story pagoda is on the way.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">09:30</div>
+          <div class="b">
+            <h4>Todai-ji and the Great Buddha</h4>
+            <p>The hall opens around 08:00 in winter. Allow 75 minutes.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">11:00</div>
+          <div class="b">
+            <h4>Kasuga Taisha path</h4>
+            <p>Stone lanterns and maples on the way to the shrine. About 45 minutes.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">12:15</div>
+          <div class="b">
+            <h4>Lunch at Azekuraya</h4>
+            <p>A tea house near Todai-ji with a vegetarian broth on request (say no dashi) and regular udon and set meals for meat eaters. Open weekdays 11:00 to 16:00. Backup for vegans: ONWA, near Nara Park.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-veg">Vegetarian ok</span><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">13:45</div>
+          <div class="b">
+            <h4>Kintetsu-Nara to Osaka-Namba</h4>
+            <p>About 40 minutes. Arrive around 14:30.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#B80F0A">
+<div class="ln">Kintetsu Nara Line</div>
+<dl>
+<dt>Board</dt><dd>Kintetsu-Nara</dd>
+<dt>Toward</dt><dd>Osaka-Namba (some trains continue to Kobe-Sannomiya)</dd>
+<dt>Ride</dt><dd>About 35 to 40 minutes on a Rapid Express</dd>
+<dt>Get off</dt><dd class="off">Osaka-Namba (Kintetsu)</dd>
+<dd class="tip">The station connects to the Midosuji Line at Namba.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">14:45</div>
+          <div class="b">
+            <h4>To Osaka Castle</h4>
+            <p>Subway to Tanimachi 4-chome or the JR loop to Osakajo-koen, about 20 minutes.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#E5171F">
+<div class="ln">Osaka Metro Midosuji Line</div>
+<dl>
+<dt>Board</dt><dd>Namba (M20)</dd>
+<dt>Toward</dt><dd>Esaka or Senri-Chuo</dd>
+<dt>Ride</dt><dd>2 stops (Shinsaibashi), about 5 minutes</dd>
+<dt>Get off</dt><dd class="off">Hommachi (M18)</dd>
+<dd class="tip">Change to the Chuo Line.</dd>
+</dl></div><div class="leg" style="--lc:#2E8B57">
+<div class="ln">Osaka Metro Chuo Line</div>
+<dl>
+<dt>Board</dt><dd>Hommachi (C16)</dd>
+<dt>Toward</dt><dd>Nagata (or Gakken-Nara-Tomigaoka)</dd>
+<dt>Ride</dt><dd>2 stops (Sakaisuji-Hommachi), about 5 minutes</dd>
+<dt>Get off</dt><dd class="off">Tanimachi 4-chome (C18)</dd>
+<dd class="tip">Follow signs to Osaka Castle, about 10 to 15 minutes on foot.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">15:15</div>
+          <div class="b">
+            <h4>Osaka Castle</h4>
+            <p>The keep closes around 17:00 with last entry around 16:30. Arrive by 15:30 to go inside. Sunset is around 16:55.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">16:45</div>
+          <div class="b">
+            <h4>Subway to Namba</h4>
+            <p>Chuo Line to Hommachi, then the Midosuji Line to Namba. About 30 minutes with the change.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#2E8B57">
+<div class="ln">Osaka Metro Chuo Line</div>
+<dl>
+<dt>Board</dt><dd>Tanimachi 4-chome (C18)</dd>
+<dt>Toward</dt><dd>Cosmosquare</dd>
+<dt>Ride</dt><dd>2 stops, about 5 minutes</dd>
+<dt>Get off</dt><dd class="off">Hommachi (C16)</dd>
+<dd class="tip">Change to the Midosuji Line.</dd>
+</dl></div><div class="leg" style="--lc:#E5171F">
+<div class="ln">Osaka Metro Midosuji Line</div>
+<dl>
+<dt>Board</dt><dd>Hommachi (M18)</dd>
+<dt>Toward</dt><dd>Nakamozu</dd>
+<dt>Ride</dt><dd>2 stops, about 4 minutes</dd>
+<dt>Get off</dt><dd class="off">Namba (M20)</dd>
+<dd class="tip">Follow Exit 14 for Dotonbori.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">17:30</div>
+          <div class="b">
+            <h4>Dotonbori, sign up for dinner</h4>
+            <p>Walk to Okonomiyaki Mizuno first and put your name down. The neon is already on.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">17:45</div>
+          <div class="b">
+            <h4>Dinner at Okonomiyaki Mizuno</h4>
+            <p>A Dotonbori classic. Meat eaters get the usual; vegetarians ask for the mushroom okonomiyaki and say “katsuobushi nuki” (no bonito flakes). Queues can run an hour. <strong>Vegan backup:</strong> Pivot Base Cafe &amp; Bar on the shopping street, with fully vegan takoyaki and yakisoba.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">19:15</div>
+          <div class="b">
+            <h4>Shinsaibashi arcade and street snacks</h4>
+            <p>An hour of shops and the Glico sign.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">20:15</div>
+          <div class="b">
+            <h4>Back to Kyoto</h4>
+            <p>Midosuji Line from Namba to Umeda (about 9 minutes), then walk to JR Osaka Station, the JR Special Rapid to Kyoto (about 28 minutes), then the JR Nara Line to Inari (about 5 minutes) and a short walk.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#E5171F">
+<div class="ln">Osaka Metro Midosuji Line</div>
+<dl>
+<dt>Board</dt><dd>Namba (M20)</dd>
+<dt>Toward</dt><dd>Esaka or Senri-Chuo</dd>
+<dt>Ride</dt><dd>4 stops (Shinsaibashi, Hommachi, Yodoyabashi), about 9 minutes</dd>
+<dt>Get off</dt><dd class="off">Umeda (M16)</dd>
+<dd class="tip">Walk about 5 to 8 minutes to JR Osaka Station through the Umeda underground.</dd>
+</dl></div><div class="leg" style="--lc:#4B7F52">
+<div class="ln">JR Kyoto Line, Special Rapid</div>
+<dl>
+<dt>Board</dt><dd>Osaka Station (platforms toward Kyoto)</dd>
+<dt>Toward</dt><dd>Kyoto, Maibara or Tsuruga</dd>
+<dt>Ride</dt><dd>About 28 minutes</dd>
+<dt>Get off</dt><dd class="off">Kyoto Station</dd>
+<dd class="tip">Then take the JR Nara Line from Kyoto to Inari, 2 stops, about 5 minutes.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">21:30</div>
+          <div class="b">
+            <h4>Home</h4>
+            <p>Set the alarm for 05:30. Tomorrow is Hiroshima.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li></ol>
+      <p class="cut"><strong>If you need to cut:</strong> Skip Shinsaibashi, or skip the castle interior.</p>
+    </section>
+    <section class="day base-kyoto" id="d-nov-27">
+      <header class="dh">
+        <div class="date"><span class="n">27</span><span class="m">Nov Fri</span></div>
+        <div class="ht">
+          <h3>Hiroshima, a lighter day: Miyajima and Peace Park</h3>
+          <p class="stay">Sleep: Fukakusa, Fushimi Ward, Kyoto  |  Load: Full</p>
+        </div>
+      </header>
+      <p class="summary">Your booked trains are the 08:03 Nozomi 99 out (arriving 09:39) and the 20:02 back (arriving 21:37). Shukkeien stays off the plan. On Nov 27 the high tide is 367 cm at 11:37 and the torii floats from about 09:20 to 14:30, so arriving at Miyajima around 10:50 catches it. The museum stays open until 18:00, so it goes last, then you eat near the station.</p>
+      <ol class="tl">
+        <li class="row k-train">
+          <div class="t">07:15</div>
+          <div class="b">
+            <h4>Leave home</h4>
+            <p>A later start. JR Nara Line from Inari to Kyoto Station, about 5 minutes, or a taxi.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#4B7F52">
+<div class="ln">JR Nara Line (or a taxi, about ¥2,000 to ¥2,500)</div>
+<dl>
+<dt>Board</dt><dd>Inari</dd>
+<dt>Toward</dt><dd>Kyoto</dd>
+<dt>Ride</dt><dd>2 stops, about 5 minutes</dd>
+<dt>Get off</dt><dd class="off">Kyoto Station</dd>
+<dd class="tip">A taxi works if the first local train is awkward.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">07:40</div>
+          <div class="b">
+            <h4>Kyoto Station</h4>
+            <p>Buy breakfast and water. Your seats should be reserved beforehand.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">08:03</div>
+          <div class="b">
+            <h4>Nozomi 99 to Hiroshima (booked)</h4>
+            <p>Your booked Nozomi leaves at 08:03 and arrives in Hiroshima at 09:39. The JR Pass does not cover Nozomi.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span><span class="chip c-book">Book ahead</span></div>
+            <div class="route"><div class="leg" style="--lc:#003DA5">
+<div class="ln">Tokaido and Sanyo Shinkansen, Nozomi 99</div>
+<dl>
+<dt>Board</dt><dd>Kyoto Station, Shinkansen platforms 11 to 14</dd>
+<dt>Toward</dt><dd>Hiroshima or Hakata</dd>
+<dt>Ride</dt><dd>About 1 hour 36 minutes</dd>
+<dt>Get off</dt><dd class="off">Hiroshima Station</dd>
+<dd class="tip">Your booked seats are in the reservation. Stay on until Hiroshima.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">09:39</div>
+          <div class="b">
+            <h4>Arrive at Hiroshima Station</h4>
+            <p>Go straight to the JR local platforms. There is no garden stop today.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">10:05</div>
+          <div class="b">
+            <h4>JR Sanyo Line to Miyajimaguchi</h4>
+            <p>About 28 minutes. Trains run every 10 to 15 minutes, so you do not need to hurry.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#4B7F52">
+<div class="ln">JR Sanyo Main Line</div>
+<dl>
+<dt>Board</dt><dd>Hiroshima Station</dd>
+<dt>Toward</dt><dd>Iwakuni (local train)</dd>
+<dt>Ride</dt><dd>About 28 minutes</dd>
+<dt>Get off</dt><dd class="off">Miyajimaguchi</dd>
+<dd class="tip">Follow the covered walkway to the ferry piers, about 3 minutes.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">10:35</div>
+          <div class="b">
+            <h4>JR ferry to Miyajima</h4>
+            <p>About 10 minutes and ¥200. You arrive around 10:50.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#2B8CBE">
+<div class="ln">JR Miyajima Ferry</div>
+<dl>
+<dt>Board</dt><dd>JR Miyajimaguchi Pier</dd>
+<dt>Toward</dt><dd>Miyajima</dd>
+<dt>Ride</dt><dd>About 10 minutes, about ¥200</dd>
+<dt>Get off</dt><dd class="off">Miyajima Pier</dd>
+<dd class="tip">The Matsudai ferry goes to the same pier.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">11:00</div>
+          <div class="b">
+            <h4>Itsukushima Shrine and the floating torii</h4>
+            <p>Walk the waterfront to the shrine. High tide is at 11:37 (367 cm), so the water is already high on arrival and the gate floats until about 14:30. Shrine entry ¥300. The five-story pagoda is under roof renovation until December.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">12:00</div>
+          <div class="b">
+            <h4>Lunch on the island</h4>
+            <p><strong>Meat and fish eaters:</strong> grilled oysters and anago (conger eel) rice. <strong>Vegetarians:</strong> Kurawanka, near the main shopping street, has a vegan okonomiyaki option; confirm hours. Everyone: fresh momiji manju (maple-leaf cakes).</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">13:15</div>
+          <div class="b">
+            <h4>Daisho-in and Momijidani Park</h4>
+            <p>Maples are close to peak. About 45 minutes. This is the one stop to skip if you want a lighter afternoon.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">14:15</div>
+          <div class="b">
+            <h4>Ferry back</h4>
+            <p>Take a ferry around 14:15.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#2B8CBE">
+<div class="ln">JR Miyajima Ferry</div>
+<dl>
+<dt>Board</dt><dd>Miyajima Pier</dd>
+<dt>Toward</dt><dd>Miyajimaguchi</dd>
+<dt>Ride</dt><dd>About 10 minutes</dd>
+<dt>Get off</dt><dd class="off">JR Miyajimaguchi Pier</dd>
+<dd class="tip">The Hiroden tram stop is a short walk from the pier.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">14:40</div>
+          <div class="b">
+            <h4>To Peace Park</h4>
+            <p>Hiroden tram Line 2 runs from Miyajimaguchi straight to Genbaku Dome-mae, about 55 minutes. Or ride the JR to Hiroshima Station and take a tram.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#C8161D">
+<div class="ln">Hiroden tram Line 2</div>
+<dl>
+<dt>Board</dt><dd>Hiroden-Miyajima(guchi) stop</dd>
+<dt>Toward</dt><dd>Hiroshima Station</dd>
+<dt>Ride</dt><dd>About 55 minutes</dd>
+<dt>Get off</dt><dd class="off">Genbaku Dome-mae</dd>
+<dd class="tip">An IC card works on the tram.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">15:35</div>
+          <div class="b">
+            <h4>Atomic Bomb Dome</h4>
+            <p>20 minutes by the riverbank.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">16:00</div>
+          <div class="b">
+            <h4>Peace Memorial Museum</h4>
+            <p>Admission ¥200. Closes 18:00, last entry 17:30. Allow 90 minutes and take an audio guide. The late afternoon is quieter than mid-morning.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">17:45</div>
+          <div class="b">
+            <h4>Memorial Park at dusk</h4>
+            <p>The Cenotaph frames the Dome. Then the Flame of Peace and the Children’s Peace Monument at dusk. Twenty minutes, then go.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">18:15</div>
+          <div class="b">
+            <h4>Tram to Hiroshima Station</h4>
+            <p>About 20 minutes. Dinner is near the station so the 20:02 train is not at risk.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#C8161D">
+<div class="ln">Hiroden tram Line 2 or 6</div>
+<dl>
+<dt>Board</dt><dd>Genbaku Dome-mae</dd>
+<dt>Toward</dt><dd>Hiroshima Station</dd>
+<dt>Ride</dt><dd>About 20 minutes</dd>
+<dt>Get off</dt><dd class="off">Hiroshima Station</dd>
+
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">18:50</div>
+          <div class="b">
+            <h4>Dinner near Hiroshima Station</h4>
+            <p>Roopali, an Indian restaurant near the station, has vegetarian and meat curries. Hiroshima-style okonomiyaki is also available in the station area (check). <strong>Nagataya</strong> and <strong>Okonomimura</strong> near Peace Park are better okonomiyaki, but their queues can run 30 to 45 minutes and would put your 20:02 train at risk.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">19:40</div>
+          <div class="b">
+            <h4>To the platform</h4>
+            <p>Buy omiyage (momiji manju) and board with a few minutes to spare.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">20:02</div>
+          <div class="b">
+            <h4>Shinkansen back to Kyoto (booked)</h4>
+            <p>Your booked train leaves at 20:02 and arrives at 21:37.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span><span class="chip c-book">Book ahead</span></div>
+            <div class="route"><div class="leg" style="--lc:#003DA5">
+<div class="ln">Sanyo and Tokaido Shinkansen, your booked train</div>
+<dl>
+<dt>Board</dt><dd>Hiroshima Station, Shinkansen platforms (the board and your ticket show the number)</dd>
+<dt>Toward</dt><dd>Shin-Osaka or Tokyo</dd>
+<dt>Ride</dt><dd>About 1 hour 35 minutes</dd>
+<dt>Get off</dt><dd class="off">Kyoto Station</dd>
+<dd class="tip">Be on the platform by 19:50.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">22:15</div>
+          <div class="b">
+            <h4>Home</h4>
+            <p>JR Nara Line to Inari and a short walk. Tomorrow’s Shinkansen leaves at 10:01, so leave the Airbnb at 08:40.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            
+          </div>
+        </li></ol>
+      <p class="cut"><strong>If you need to cut:</strong> Skip Daisho-in and Momijidani Park if you want a lighter afternoon.</p>
+    </section>
+    <section class="day base-tokyo2" id="d-nov-28">
+      <header class="dh">
+        <div class="date"><span class="n">28</span><span class="m">Nov Sat</span></div>
+        <div class="ht">
+          <h3>Kyoto to Tokyo, Rikugien after dark</h3>
+          <p class="stay">Sleep: Nakazato, Kita City (near Komagome)  |  Load: Easy</p>
+        </div>
+      </header>
+      <p class="summary">An easy arrival day after the long Hiroshima night. Rikugien is a 7-minute walk from Komagome Station and its autumn night illumination runs Nov 25 to Dec 6.</p>
+      <ol class="tl">
+        <li class="row k-plain">
+          <div class="t">07:30</div>
+          <div class="b">
+            <h4>Wake and pack</h4>
+            <p>Check out of Fukakusa per the host’s instructions. You carry the bags on this direct train.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">08:40</div>
+          <div class="b">
+            <h4>To Kyoto Station</h4>
+            <p>JR Nara Line from Inari, about 5 minutes. Buy ekiben and snacks. A taxi is about ¥2,000 to ¥2,500 if you prefer.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#4B7F52">
+<div class="ln">JR Nara Line</div>
+<dl>
+<dt>Board</dt><dd>Inari</dd>
+<dt>Toward</dt><dd>Kyoto</dd>
+<dt>Ride</dt><dd>2 stops, about 5 minutes</dd>
+<dt>Get off</dt><dd class="off">Kyoto Station</dd>
+
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">10:01</div>
+          <div class="b">
+            <h4>Shinkansen to Tokyo (your ticket)</h4>
+            <p>Departs 10:01, arrives 12:15. Put the bags in the luggage space at the car end. Window seat D or E gives a Fuji view going east.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#003DA5">
+<div class="ln">Tokaido Shinkansen</div>
+<dl>
+<dt>Board</dt><dd>Kyoto Station, Shinkansen platforms 11 to 14</dd>
+<dt>Toward</dt><dd>Tokyo (Nozomi)</dd>
+<dt>Ride</dt><dd>2 hours 14 minutes</dd>
+<dt>Get off</dt><dd class="off">Tokyo Station, platforms 14 to 19</dd>
+<dd class="tip">After exiting at the Yaesu side, follow signs to Tokyo Ramen Street.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">12:30</div>
+          <div class="b">
+            <h4>Lunch at Tokyo Ramen Street</h4>
+            <p>A row of ramen shops inside Tokyo Station. T’s TanTan is plant-based; the other shops serve meat ramen. Everyone can eat on the same street.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-veg">Vegetarian ok</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">13:45</div>
+          <div class="b">
+            <h4>JR Yamanote Line to Komagome</h4>
+            <p>Nine stops, about 20 minutes. The Nakazato Airbnb is closest to Komagome Station; confirm the walk on a map. A taxi from Tokyo Station is about ¥2,500 to ¥3,000.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span><span class="chip c-check">Confirm on the day</span></div>
+            <div class="route"><div class="leg" style="--lc:#9ACD32">
+<div class="ln">JR Yamanote Line</div>
+<dl>
+<dt>Board</dt><dd>Tokyo Station</dd>
+<dt>Toward</dt><dd>Ueno and Ikebukuro (the train that stops next at Kanda and Akihabara)</dd>
+<dt>Ride</dt><dd>9 stops (Kanda, Akihabara, Okachimachi, Ueno, Uguisudani, Nippori, Nishi-Nippori, Tabata), about 20 minutes</dd>
+<dt>Get off</dt><dd class="off">Komagome</dd>
+<dd class="tip">Use the South Exit for Rikugien. Check the walk to your Airbnb on the map.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">14:15</div>
+          <div class="b">
+            <h4>Bag drop and check-in</h4>
+            <p>Message the host for an early drop. Rest for two hours.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">17:15</div>
+          <div class="b">
+            <h4>Walk to Rikugien</h4>
+            <p>About 7 minutes from Komagome Station (South Exit). The garden closes at 17:00 and reopens at 18:00 for the night event. Entry is through the Main Gate only. The Somei Gate is exit only.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">18:00</div>
+          <div class="b">
+            <h4>Rikugien night illumination</h4>
+            <p>Your ticket is booked. Lit maples, a projection on the old storehouse and the bamboo grove, and reflections in the pond. Open 18:00 to 20:30 with last entry at 19:30. At the gate, show the ticket on your phone screen and staff will operate it. Printouts and screenshots are not accepted. Allow 75 minutes.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">19:30</div>
+          <div class="b">
+            <h4>Dinner near Komagome</h4>
+            <p>Pick a ramen or curry shop with an English picture menu within a short walk. Keep it simple: you are tired.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">20:30</div>
+          <div class="b">
+            <h4>Early night</h4>
+            <p>Tomorrow is Kamakura, a long day.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li></ol>
+      
+    </section>
+    <section class="day base-tokyo2" id="d-nov-29">
+      <header class="dh">
+        <div class="date"><span class="n">29</span><span class="m">Nov Sun</span></div>
+        <div class="ht">
+          <h3>Kamakura, Enoshima, Shinjuku at night</h3>
+          <p class="stay">Sleep: Nakazato, Kita City  |  Load: Full</p>
+        </div>
+      </header>
+      <p class="summary">Temples in the morning, a seaside lunch, sunset on Enoshima, then Shinjuku. It is Sunday, so go early. Hase-dera holds an autumn night illumination in late November (2025 ran Nov 22 to Dec 7; 2026 dates were not confirmed), so check before you decide to stay for it.</p>
+      <ol class="tl">
+        <li class="row k-train">
+          <div class="t">06:45</div>
+          <div class="b">
+            <h4>Leave home</h4>
+            <p>Komagome to Tokyo Station on the Yamanote Line, about 20 minutes.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#9ACD32">
+<div class="ln">JR Yamanote Line</div>
+<dl>
+<dt>Board</dt><dd>Komagome</dd>
+<dt>Toward</dt><dd>Ueno and Tokyo (the train that stops next at Tabata and Nishi-Nippori)</dd>
+<dt>Ride</dt><dd>9 stops, about 20 minutes</dd>
+<dt>Get off</dt><dd class="off">Tokyo Station</dd>
+<dd class="tip">Follow signs to the Yokosuka Line platforms underground.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">07:30</div>
+          <div class="b">
+            <h4>JR Yokosuka Line to Kamakura</h4>
+            <p>About 55 minutes, around ¥920 each.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#4B7F52">
+<div class="ln">JR Yokosuka Line</div>
+<dl>
+<dt>Board</dt><dd>Tokyo Station, the underground Sobu-Yokosuka platforms</dd>
+<dt>Toward</dt><dd>Zushi or Kurihama (all stop at Kamakura)</dd>
+<dt>Ride</dt><dd>About 55 minutes</dd>
+<dt>Get off</dt><dd class="off">Kamakura</dd>
+<dd class="tip">Use the East Exit. The Enoden station is beside the JR station.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">08:30</div>
+          <div class="b">
+            <h4>Buy the Enoden day pass</h4>
+            <p>The “Noriorikun” pass is ¥800 and pays off after three rides. Buy it from the machine at the Enoden station, separate from the JR gates.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">08:50</div>
+          <div class="b">
+            <h4>Enoden to Hase</h4>
+            <p>Three stops, about 7 minutes.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#0F8A5F">
+<div class="ln">Enoden</div>
+<dl>
+<dt>Board</dt><dd>Kamakura (Enoden)</dd>
+<dt>Toward</dt><dd>Fujisawa</dd>
+<dt>Ride</dt><dd>2 stops (Yuigahama), about 7 minutes</dd>
+<dt>Get off</dt><dd class="off">Hase</dd>
+<dd class="tip">Hase-dera is about 5 minutes on foot and Kotoku-in about 8.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">09:00</div>
+          <div class="b">
+            <h4>Hase-dera</h4>
+            <p>Opens 08:00. ¥400. Sources list closing at 16:30 or 17:00. The terrace gives sea views and the Kannon statue is inside.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">10:15</div>
+          <div class="b">
+            <h4>Kotoku-in, the Great Buddha</h4>
+            <p>A 5 to 10 minute walk. ¥300, plus ¥50 to step inside the Buddha. Open 08:00 to 17:00 in winter.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">11:15</div>
+          <div class="b">
+            <h4>Lunch at Magokoro, near Hase</h4>
+            <p>A seaside hemp cafe, mostly vegan with a couple of fish dishes, across from the beach. Open 11:00 to 21:00 and closed Mondays. Backup: Natudeco, a vegetarian cafe uphill from Hase station.</p>
+            <div class="chips"><span class="chip c-veg">Vegetarian ok</span><span class="chip c-both">Works for all four</span><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">12:45</div>
+          <div class="b">
+            <h4>Enoden to Enoshima</h4>
+            <p>About 25 minutes on the same pass.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#0F8A5F">
+<div class="ln">Enoden</div>
+<dl>
+<dt>Board</dt><dd>Hase</dd>
+<dt>Toward</dt><dd>Fujisawa</dd>
+<dt>Ride</dt><dd>About 25 minutes</dd>
+<dt>Get off</dt><dd class="off">Enoshima</dd>
+<dd class="tip">The island is a 15 to 20 minute walk across the bridge.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">13:15</div>
+          <div class="b">
+            <h4>Walk onto Enoshima island</h4>
+            <p>About 15 to 20 minutes across the bridge from Enoshima Station. <strong>Fish eaters:</strong> shirasu (whitebait) bowls on Benten-dori. <strong>Vegetarians:</strong> vegetable tempura and sweets.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">14:00</div>
+          <div class="b">
+            <h4>Enoshima Shrine and the Sea Candle</h4>
+            <p>Climb for the view. On a clear day Mt. Fuji shows across the bay.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">16:20</div>
+          <div class="b">
+            <h4>Sunset</h4>
+            <p>Sunset is around 16:35. Pick a seaside viewpoint on the west side.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">17:00</div>
+          <div class="b">
+            <h4>To Katase-Enoshima Station</h4>
+            <p>Odakyu Enoshima Line direct to Shinjuku, about 70 to 80 minutes. The Romancecar costs extra and is not necessary.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#0070BB">
+<div class="ln">Odakyu Enoshima Line, then the Odakyu line to Shinjuku</div>
+<dl>
+<dt>Board</dt><dd>Katase-Enoshima Station (about 15 minutes on foot from the island)</dd>
+<dt>Toward</dt><dd>Shinjuku (some trains need a change at Sagami-Ono)</dd>
+<dt>Ride</dt><dd>About 70 to 80 minutes; the Romancecar is direct for an extra fare</dd>
+<dt>Get off</dt><dd class="off">Shinjuku (Odakyu)</dd>
+<dd class="tip">Google Maps shows whether your train is direct.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">18:30</div>
+          <div class="b">
+            <h4>Arrive Shinjuku</h4>
+            <p>Walk to Shinjuku-sanchome.</p>
+            <div class="chips"></div>
+            <div class="route"><div class="leg" style="--lc:#E60012">
+<div class="ln">Tokyo Metro Marunouchi Line</div>
+<dl>
+<dt>Board</dt><dd>Shinjuku (M08)</dd>
+<dt>Toward</dt><dd>Ikebukuro</dd>
+<dt>Ride</dt><dd>1 stop, about 2 minutes</dd>
+<dt>Get off</dt><dd class="off">Shinjuku-sanchome (M09)</dd>
+<dd class="tip">Ain Soph Journey is right at Exit C5. Or walk about 12 minutes.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">19:00</div>
+          <div class="b">
+            <h4>Dinner at Ain Soph Journey</h4>
+            <p>A fully vegan restaurant with burgers, fried dishes and pancakes that meat eaters usually enjoy. Reserve. Confirm last order time.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-veg">Vegetarian ok</span><span class="chip c-book">Book ahead</span><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">20:45</div>
+          <div class="b">
+            <h4>Omoide Yokocho and Golden Gai</h4>
+            <p>Meat eaters: yakitori and a drink. Vegetarians: edamame and drinks, since the grills share sauces.</p>
+            <div class="chips"><span class="chip c-meat">Meat eaters</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">22:00</div>
+          <div class="b">
+            <h4>Yamanote Line home</h4>
+            <p>About 20 minutes from Shinjuku to Komagome.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#9ACD32">
+<div class="ln">JR Yamanote Line</div>
+<dl>
+<dt>Board</dt><dd>Shinjuku</dd>
+<dt>Toward</dt><dd>Ikebukuro and Ueno (the train that stops next at Shin-Okubo and Takadanobaba)</dd>
+<dt>Ride</dt><dd>7 stops (Shin-Okubo, Takadanobaba, Mejiro, Ikebukuro, Otsuka, Sugamo), about 18 minutes</dd>
+<dt>Get off</dt><dd class="off">Komagome</dd>
+
+</dl></div></div>
+          </div>
+        </li></ol>
+      <p class="cut"><strong>If you need to cut:</strong> Skip Enoshima, finish Kamakura by 14:00 and rest before Shinjuku.</p>
+    </section>
+    <section class="day base-tokyo2" id="d-nov-30">
+      <header class="dh">
+        <div class="date"><span class="n">30</span><span class="m">Nov Mon</span></div>
+        <div class="ht">
+          <h3>Gaien ginkgo, Meiji Jingu, Shibuya Sky, farewell dinner</h3>
+          <p class="stay">Sleep: Nakazato, Kita City  |  Load: Full</p>
+        </div>
+      </header>
+      <p class="summary">A Monday for the crowded west side: the ginkgo avenue is at its forecast peak (about Nov 26), and Takeshita Street is calmer on a weekday. Souvenirs in Shibuya, then your farewell teppanyaki dinner. Shibuya Sky is optional: you have no ticket. The last night ends by about 21:00 because the taxi is at 07:00.</p>
+      <ol class="tl">
+        <li class="row k-train">
+          <div class="t">08:00</div>
+          <div class="b">
+            <h4>Leave home</h4>
+            <p>About 30 minutes with one change. Namboku Line to Nagatacho, then the Hanzomon Line to Aoyama-itchome.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#00AC9B">
+<div class="ln">Tokyo Metro Namboku Line</div>
+<dl>
+<dt>Board</dt><dd>Komagome (N14)</dd>
+<dt>Toward</dt><dd>Meguro</dd>
+<dt>Ride</dt><dd>7 stops (Hon-komagome, Todai-mae, Korakuen, Iidabashi, Ichigaya, Yotsuya), about 16 minutes</dd>
+<dt>Get off</dt><dd class="off">Nagatacho (N07)</dd>
+<dd class="tip">Change to the Hanzomon Line.</dd>
+</dl></div><div class="leg" style="--lc:#8F76D6">
+<div class="ln">Tokyo Metro Hanzomon Line</div>
+<dl>
+<dt>Board</dt><dd>Nagatacho (Z04)</dd>
+<dt>Toward</dt><dd>Shibuya</dd>
+<dt>Ride</dt><dd>1 stop, about 2 minutes</dd>
+<dt>Get off</dt><dd class="off">Aoyama-itchome (Z03)</dd>
+<dd class="tip">Follow signs to Meiji Jingu Gaien Icho Namiki, about 5 to 8 minutes.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">08:30</div>
+          <div class="b">
+            <h4>Icho Namiki, the ginkgo avenue</h4>
+            <p>A 300-meter tunnel of 146 ginkgo trees at Meiji Jingu Gaien, free and open any time. The picture gallery at the far end is closed for seismic work until May 2027, and parts of the grounds are under construction. Tokyo’s evening light-up had not been announced for 2026 as of early October.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">09:30</div>
+          <div class="b">
+            <h4>Ginza Line to Omotesando, then the Chiyoda Line to Meiji-jingumae</h4>
+            <p>About 15 minutes.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#F39700">
+<div class="ln">Tokyo Metro Ginza Line</div>
+<dl>
+<dt>Board</dt><dd>Gaienmae (G03), about 5 minutes from the avenue</dd>
+<dt>Toward</dt><dd>Shibuya</dd>
+<dt>Ride</dt><dd>1 stop, about 2 minutes</dd>
+<dt>Get off</dt><dd class="off">Omotesando (G02)</dd>
+<dd class="tip">Change to the Chiyoda Line.</dd>
+</dl></div><div class="leg" style="--lc:#00BB85">
+<div class="ln">Tokyo Metro Chiyoda Line</div>
+<dl>
+<dt>Board</dt><dd>Omotesando (C04)</dd>
+<dt>Toward</dt><dd>Yoyogi-Uehara</dd>
+<dt>Ride</dt><dd>1 stop, about 2 minutes</dd>
+<dt>Get off</dt><dd class="off">Meiji-jingumae &lt;Harajuku&gt; (C03)</dd>
+<dd class="tip">Follow signs to Meiji Jingu, about 3 minutes.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">10:00</div>
+          <div class="b">
+            <h4>Meiji Jingu</h4>
+            <p>Walk under the huge torii and along the forest path to the main shrine, about 15 minutes each way.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">11:15</div>
+          <div class="b">
+            <h4>Yoyogi Park and Takeshita Street</h4>
+            <p>Ginkgo avenues next door, then Takeshita Street. A weekday is much calmer than the Sunday it used to be.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">12:30</div>
+          <div class="b">
+            <h4>Lunch in Harajuku</h4>
+            <p><strong>Sakura Tei:</strong> self-cook okonomiyaki with vegetarian, vegan and meat options. Expect a queue. <strong>Backup:</strong> AFURI ramen, which sells a Rainbow Vegan Ramen next to its regular bowls. Check hours for both.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">14:00</div>
+          <div class="b">
+            <h4>Omotesando</h4>
+            <p>A zelkova-lined avenue with Omotesando Hills and small galleries.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">15:15</div>
+          <div class="b">
+            <h4>Ginza Line to Shibuya, then the Scramble Crossing</h4>
+            <p>About 5 minutes. Cross it once and watch from the station walkway windows. Free.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#F39700">
+<div class="ln">Tokyo Metro Ginza Line</div>
+<dl>
+<dt>Board</dt><dd>Omotesando (G02)</dd>
+<dt>Toward</dt><dd>Shibuya</dd>
+<dt>Ride</dt><dd>1 stop, about 3 minutes</dd>
+<dt>Get off</dt><dd class="off">Shibuya (G01)</dd>
+<dd class="tip">Shibuya Scramble Square connects to the station; follow signs for Shibuya Sky.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">15:40</div>
+          <div class="b">
+            <h4>Souvenir shopping in Shibuya</h4>
+            <p>Shibuya Hikarie, Shibuya Parco and Don Quijote are all within a few minutes of the station. Pick up gifts and last-minute snacks. You have about two hours before dinner.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">Optional</div>
+          <div class="b">
+            <h4>Shibuya Sky, only if a slot opens</h4>
+            <p>You have no ticket for Nov 30. Adult counter tickets are sold only if online inventory remains, so a walk-up will not work if the date is sold out online. Daytime slots before 15:00 (¥2,700) are the likeliest to appear. Check the official site, Klook and KKday around the end of Nov 29 (the usual free-cancellation cutoff is one day before; confirm on your site) and again on the morning of Nov 30. If a slot appears, swap it in for the shopping hour and keep the 17:45 train to dinner.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">17:45</div>
+          <div class="b">
+            <h4>Ginza Line to Akasaka-mitsuke</h4>
+            <p>About 13 minutes. Walk 3 minutes to the restaurant.</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#F39700">
+<div class="ln">Tokyo Metro Ginza Line</div>
+<dl>
+<dt>Board</dt><dd>Shibuya (G01)</dd>
+<dt>Toward</dt><dd>Asakusa</dd>
+<dt>Ride</dt><dd>4 stops (Omotesando, Gaienmae, Aoyama-itchome), about 10 minutes</dd>
+<dt>Get off</dt><dd class="off">Akasaka-mitsuke (G05)</dd>
+<dd class="tip">The restaurant is about 3 minutes on foot.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-food">
+          <div class="t">18:30</div>
+          <div class="b">
+            <h4>Farewell dinner at Yasaiya Teppanyaki, Akasaka</h4>
+            <p>Teppanyaki built around seasonal vegetables, with an A5 wagyu course for the meat eaters and a vegetarian menu for the others. Dinner courses start around ¥12,000. <strong>Reserve at least 3 days ahead</strong> and ask for the vegetarian menu.</p>
+            <div class="chips"><span class="chip c-both">Works for all four</span><span class="chip c-book">Book ahead</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-train">
+          <div class="t">20:45</div>
+          <div class="b">
+            <h4>Home to Komagome</h4>
+            <p>About 35 minutes with one change (Namboku Line via Nagatacho).</p>
+            <div class="chips"><span class="chip c-train">Train or transit</span></div>
+            <div class="route"><div class="leg" style="--lc:#00AC9B">
+<div class="ln">Underground passage, then the Tokyo Metro Namboku Line</div>
+<dl>
+<dt>Board</dt><dd>Akasaka-mitsuke, walk about 5 minutes to Nagatacho (N07) via the connecting passage</dd>
+<dt>Toward</dt><dd>Akabane-Iwabuchi</dd>
+<dt>Ride</dt><dd>7 stops, about 16 minutes</dd>
+<dt>Get off</dt><dd class="off">Komagome (N14)</dd>
+<dd class="tip">Follow the Nagatacho signs in the station.</dd>
+</dl></div></div>
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">21:15</div>
+          <div class="b">
+            <h4>Pack and confirm the taxi</h4>
+            <p>Check passports, chargers, medicine and keys. Confirm the 07:00 van taxi.</p>
+            <div class="chips"><span class="chip c-book">Book ahead</span></div>
+            
+          </div>
+        </li></ol>
+      <p class="cut"><strong>If you need to cut:</strong> Cut Omotesando and go to Shibuya early.</p>
+    </section>
+    <section class="day base-tokyo2" id="d-dec-01">
+      <header class="dh">
+        <div class="date"><span class="n">01</span><span class="m">Dec Tue</span></div>
+        <div class="ht">
+          <h3>Fly home from Haneda</h3>
+          <p class="stay">Sleep: Check out of Nakazato, Kita City  |  Load: Easy</p>
+        </div>
+      </header>
+      <p class="summary">NH110 leaves Haneda Terminal 2 at 11:35 and lands at JFK at 10:30 the same morning. Your ticket notice sets a 60-minute check-in deadline, so aim to be at the airport three hours early.</p>
+      <ol class="tl">
+        <li class="row k-plain">
+          <div class="t">06:30</div>
+          <div class="b">
+            <h4>Wake and final check</h4>
+            <p>Passports, chargers, medicine, keys. Confirm your Terminal 2 departure on the ANA app or website.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">07:00</div>
+          <div class="b">
+            <h4>Pre-booked van taxi</h4>
+            <p>Book it on the GO app or Uber the night before and choose a van or XL option so four large bags fit. Expect ¥9,000 to ¥12,000 as an estimate; the app shows an upfront price. The ride takes 40 to 55 minutes. A rush-hour train with four bags is worse.</p>
+            <div class="chips"><span class="chip c-book">Book ahead</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">08:00</div>
+          <div class="b">
+            <h4>Arrive Haneda Terminal 2</h4>
+            <p>Aim for 08:30 at the latest, three hours before departure.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">10:35</div>
+          <div class="b">
+            <h4>Check-in deadline</h4>
+            <p>ANA’s notice says check-in closes 60 minutes before departure.</p>
+            <div class="chips"><span class="chip c-check">Confirm on the day</span></div>
+            
+          </div>
+        </li>
+        <li class="row k-plain">
+          <div class="t">11:35</div>
+          <div class="b">
+            <h4>NH110 departs for New York</h4>
+            <p>Arrives at JFK Terminal 7 at 10:30 on Dec 1.</p>
+            <div class="chips"></div>
+            
+          </div>
+        </li></ol>
+      
+    </section>
+
+  <p class="foot">Times are realistic targets, not timetables. Your two Shinkansen tickets and flights are the fixed points. Line names, station codes, directions and stop counts come from my knowledge of the networks and the sources above; platforms and exits can change, so confirm each step in Google Maps, Jorudan or SmartEX on the day. Opening hours, fares and restaurant details come from published sources checked in early November 2026 and can change, so confirm anything marked “Confirm on the day.” Restaurants noted as vegetarian-friendly come from review and listing sites; ask about dashi and pork at every one.</p>
+</main>
+<script>
+(function(){
+  try{
+    var cells=document.querySelectorAll('.cell');
+    var map={};cells.forEach(function(c){map[c.getAttribute('data-target')]=c;});
+    var secs=document.querySelectorAll('.day');
+    if(!('IntersectionObserver' in window))return;
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          cells.forEach(function(c){c.classList.remove('active');});
+          var c=map[e.target.id];
+          if(c){c.classList.add('active');
+            var strip=c.parentElement;
+            var left=c.offsetLeft-strip.clientWidth/2+c.clientWidth/2;
+            try{strip.scrollTo({left:left,behavior:'smooth'});}catch(_){strip.scrollLeft=left;}
+          }
+        }
+      });
+    },{rootMargin:'-120px 0px -65% 0px',threshold:0});
+    secs.forEach(function(s){io.observe(s);});
+  }catch(_){}
+})();
+</script>
+</body>
+</html>
